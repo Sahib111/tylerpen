@@ -5,8 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./boss.css"/>
 <title>Author Template</title>
+<style>
+.preloader {
+position: fixed; 
+width:100%;
+height:100%;
+z-index: 9999999;
+background:url("./mickey.gif"); 
+background-color: #FFF; 
+background-repeat: no-repeat;
+background-position:center;
+align-items:center;
+}
+</style>
 </head>
 <body>
-
+<div class='preloader'></div>
+<script>
+$(window).load(function() { 
+$(".preloader").fadeOut(5000);
+});
+</script>
 </body>
 </html>
