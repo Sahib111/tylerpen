@@ -44,11 +44,11 @@ align-items:center;
 </style>
 </head>
 <body>
-<div class="preloader"><div class="circle-ripple"></div></div>
+<div class="myfix preloader"><div class="circle-ripple"></div></div>
 <script>
-$(window).load(function() { 
-$(".preloader").fadeOut(3000);
-});
+setTimeout(function() {
+$("myfix").removeClass(".preloader");
+}, 4600);
 </script>
 </body>
 </html>
