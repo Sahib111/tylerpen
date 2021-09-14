@@ -11,18 +11,18 @@
 
 
 .preloader {
-width:100%;
-height:100%;
+width:100%!important;
+height:100%!important;
 z-index: 9999999!important;
 background:url("./download.png");
 background-repeat:no-repeat!important;
 background-position:center;
 align-items:center;
-flex-direction:column;
 }
 
 .author-pic {
 margin-top:50%;
+flex-direction:column;
 }
 
 .placeholder-wave {
@@ -77,7 +77,7 @@ animation:placeholder-wave 1s linear infinite;
 </nav>
 
 <div class="bg-dark preloader d-flex align-items-center myfix placeholder-wave justify-content-center">
-<img class="author-pic d-flex align-items-center myfix placeholder-wave justify-content-center" src="./download.png"></img>
+<img class="author-pic d-flex align-items-center myfix placeholder-wave justify-content-center" src="./download.png">
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
