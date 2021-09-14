@@ -29,7 +29,14 @@ margin-top:50%;
 flex-direction:column;
 }
 
-
+.placeholder-wave {
+-webkit-mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0) 75%,#000 95%);
+mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0) 75%,#000 95%);
+-webkit-mask-size:200% 100%;
+mask-size:200% 100%;
+-webkit-animation:placeholder-wave 2s linear infinite;
+animation:placeholder-wave 2s linear infinite;
+}
 
 </style>
 </head>
@@ -74,8 +81,8 @@ flex-direction:column;
 </nav>
 
 
-<div class="preloader myfix placeholder-wave">
-<div class="author-pic d-flex align-items-center">
+<div class="">
+<div class="author-pic d-flex align-items-center preloader myfix placeholder-wave">
 <img class="justify-content-center" src="./download.png">
 </div>
 </div>
