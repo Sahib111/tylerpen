@@ -9,10 +9,6 @@
 <title>Author Template</title>
 <style>
 
-body {
-z-index:1;
-}
-
 .preloader {
 width:100%;
 height:100%;
@@ -29,8 +25,8 @@ flex-direction:column;
 }
 
 .placeholder-wave {
--webkit-mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,1) 75%,#000 95%);
-mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,1) 75%,#000 95%);
+-webkit-mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0) 75%,#000 95%);
+mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0) 75%,#000 95%);
 -webkit-mask-size:200% 100%;
 mask-size:200% 100%;
 -webkit-animation:placeholder-wave 1s linear infinite;
@@ -40,11 +36,6 @@ animation:placeholder-wave 1s linear infinite;
 </style>
 </head>
 <body>
-<div class="myfix placeholder-wave">
-<div class="author-pic d-flex align-items-center preloader">
-<img class="justify-content-center" src="./download.png">
-</div>
-</div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
 <div class="container-fluid"> 
@@ -83,6 +74,13 @@ animation:placeholder-wave 1s linear infinite;
 </div>
 </div>
 </nav>
+
+
+<div class="myfix placeholder-wave">
+<div class="author-pic d-flex align-items-center preloader">
+<img class="justify-content-center" src="./download.png">
+</div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
