@@ -27,18 +27,13 @@ flex-direction:column;
 
 .placeholder-wave {
 z-index:99999999;
-}
-
-.marginfix {
-position:inherit;
-margin-top:-50%;
+filter:brightness(50%);
 }
 
 </style>
 </head>
 <body>
 <div class="author-pic d-flex align-items-center preloader myfix placeholder-wave">
-<span class=""></span>
 <img class="justify-content-center" src="./download.png">
 </div>
 
@@ -46,7 +41,7 @@ margin-top:-50%;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script>
 setTimeout(function() {
-$(".myfix").removeClass("placeholder-wave").removeClass("preloader");
+$(".myfix").removeClass("placeholder-wave").fadeOut("preloader");
 }, 4500);
 </script>
 </body>
