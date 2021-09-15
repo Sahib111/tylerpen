@@ -11,30 +11,6 @@
 <title>Author Template</title>
 <style>
 
-.yt {
-transition:0.5s cubic-bezier(.02,1,.64,.04);
-background:#fff;
-position:fixed;
-width:0%;
-top:0;
-left:0;
-display:inline-block;
-height:10px;
-z-index:99999999999;
-}
-
-.bar {
-background-color:#E3242B;
-display:inline-block;
-width:0%;
-position:fixed;
-height:10px;
-top:0;
-left:0;
-transition:0.5s cubic-bezier(.02,1,.64,.04);
-z-index:999999999999;
-}
-
 .author-container {
 width:100vw;
 height:100vh;
@@ -332,24 +308,6 @@ input.btn-black {
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<script>
-setTimeout(function() {
-$(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
-}, 5000);
-</script>
-<script>
-$(document).ready(function() {
-$('.bar1').click(function() {
-$('.bar').css('width','100%');
-});
-});
-
-$(document).ready(function() {
-$('.bar1').click(function() {
-$('.yt').css('width','100%',);
-});
-});
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 </body>
 </html>
