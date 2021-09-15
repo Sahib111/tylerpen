@@ -225,7 +225,7 @@ input.btn-black {
     </div>
   </header>
 
-  <main>
+  
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
@@ -356,7 +356,7 @@ input.btn-black {
 </div>
 </form>
 <div class="text-center text-md-left">
-<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+<a class="btn btn-primary bar1" onclick="document.getElementById('contact-form').submit();">Send</a>
 </div>
 <div class="status"></div>
 </div>
@@ -381,22 +381,6 @@ input.btn-black {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-<script>
-(function($) { 	
-"use strict"; 	
-$('nav .dropdown').hover(function(){ 		
-var $this = $(this); 		
-$this.addClass('show'); 		
-$this.find('> a').attr('aria-expanded', true); 		
-$this.find('.dropdown-menu').addClass('show'); 	
-}, function(){ 		
-var $this = $(this); 			
-$this.removeClass('show'); 			
-$this.find('> a').attr('aria-expanded', false); 			
-$this.find('.dropdown-menu').removeClass('show'); 	
-}); 
-});
-</script>
 <script>
 setTimeout(function() {
 $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
