@@ -11,7 +11,29 @@
 <title>Author Template</title>
 <style>
 
+.yt {
+transition:0.5s cubic-bezier(.02,1,.64,.04);
+background:#fff;
+position:fixed;
+width:0%;
+top:0;
+left:0;
+display:inline-block;
+height:4px;
+z-index:99999999999;
+}
 
+.bar {
+background-color:#E3242B;
+display:inline-block;
+width:0%;
+position:fixed;
+height:4px;
+top:0;
+left:0;
+transition:0.5s cubic-bezier(.02,1,.64,.04);
+z-index:999999999999;
+}
 
 .author-container {
 width:100vw;
@@ -175,41 +197,8 @@ input.btn-black {
 </style>
 </head>
 <body>
-
-<div class="container">
-<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
-<div class="container">
-<a class="navbar-brand" href="index.html">Logo</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="fa fa-bars"></span> Menu
-</button>
-<div class="collapse navbar-collapse" id="ftco-nav">
-<ul class="navbar-nav ml-auto mr-md-3">
-<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-<li class="dropdown nav-item d-md-flex align-items-center">
-<a href="#" class="dropdown-toggle nav-link d-flex align-items-center justify-content-center icon-cart p-0" id="dropdown04" data-toggle="dropdown" aria-expanded="false">
-<i class="fa fa-shopping-cart"></i>
-<b class="caret"></b>
-</a>
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown04">
-<a href="#" class="dropdown-item">Action</a>
-<a href="#" class="dropdown-item">Another action</a>
-<a href="#" class="dropdown-item">Something else here</a>
-<div class="dropdown-divider"></div>
-<a href="#" class="dropdown-item">Separated link</a>
-<div class="dropdown-divider"></div>
-<a href="#" class="dropdown-item">One more separated link</a>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-
+<div class="yt">
+<span class="bar placeholder-wave"></span> 
 </div>
 
 <div class="preloader myfix placeholder-wave author-container">
@@ -412,6 +401,23 @@ $this.find('.dropdown-menu').removeClass('show');
 setTimeout(function() {
 $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
 }, 5000);
+</script>
+<script>
+$(document).ready(function() {
+$('.bar1').click(function() {
+$('.bar').each(function() {
+$('.bar').css('width','100%');
+});
+});
+});
+
+$(document).ready(function() {
+$('.bar1').click(function() {
+$('.yt').each(function() {
+$('.yt').css('width','100%',);
+});
+});
+});
 </script>
 </body>
 </html>
