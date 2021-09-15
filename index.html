@@ -162,11 +162,6 @@ input.btn-black {
 max-height:40px!important;
 }
 
-.navbar .navbar-expand-lg{
-display:block!important;
-flex-wrap:nowrap!important;
-}
-
 </style>
 </head>
 <body>
@@ -175,7 +170,7 @@ flex-wrap:nowrap!important;
 <div class="row">
 <div class="col-12">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
+  <div class="container-fluid" style="max-width:120%;">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -225,7 +220,7 @@ flex-wrap:nowrap!important;
         <div class="col">
             <div class="d-flex breaking-news bg-white">
                 <div class="d-flex justify-content-center bg-danger py-2 text-white px-1 news"><span class="d-flex">&nbsp;Latest News</span></div>
-                <marquee class="news-scroll py-2" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"><img src="./images.jpeg"><br/>The one and only </a> <span class="dot"></span> <a href="#"><img src="./images.jpeg"> </a> <span class="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a> </marquee>
+                <marquee class="news-scroll py-2" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"><img src="./images.jpeg">The one and only </a> <span class="dot"></span> <a href="#"><img src="./images.jpeg"> </a> <span class="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a> </marquee>
             </div>
         </div>
     </div>
