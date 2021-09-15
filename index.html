@@ -40,18 +40,19 @@ animation:placeholder-wave 1s linear infinite;
 }
 
 .placeholder {
+display:none;
 filter:brightness(5%) contrast(8%);
 }
 
 .bounceIn {
 animation:bounceIn;
-animation-delay:2.8s;
+animation-delay:7s;
 animation-duration:2s;
 }
 
 .fadeInRightBig {
 animation:fadeInRightBig;
-animation-delay:2.8s;
+animation-delay:7s;
 animation-duration:2s;
 }
 
@@ -309,7 +310,7 @@ input.btn-black {
 <script>
 setTimeout(function() {
 $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
-}, 7000);
+}, 6000);
 </script>
 
 </body>
