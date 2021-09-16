@@ -24,6 +24,8 @@ background-position:center;
 
 .author-pic {
 margin-top:40%;
+width:100vw;
+height:100vh;
 }
 
 .placeholder {
@@ -38,10 +40,6 @@ mask-size:200% 100%;
 -webkit-animation:placeholder-wave 1s linear infinite;
 animation:placeholder-wave 1s linear infinite;
 }
-
-
-
-
 
 .bounceIn {
 animation:bounceIn;
@@ -133,12 +131,11 @@ font-family: 'Titillium Web', sans-serif;
 <div class="row">
 <div class="col-12">
 <div class="breaking-news bg-white">
-<div class="justify-content-center bg-danger py-2 text-white px-1 news"><span class="d-flex">&nbsp;Hot this week</span></div>
+<div class="font-weight-bold justify-content-center bg-danger py-2 text-white px-1 news"><span class="d-flex">&nbsp;Hot this week</span></div>
 <marquee class="news-scroll py-2 w-100" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
 <a href="#"><img class="w-25 h-25" src="./images.jpeg"></a> 
 <span class="dot"></span> 
 <a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
-<span class="dot"></span> 
 <span class="dot"></span> 
 <a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
 <span class="dot"></span> 
@@ -229,7 +226,7 @@ font-family: 'Titillium Web', sans-serif;
 </div>
 </form>
 <div class="text-center text-md-left">
-<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();"><h4>Send</h4></a>
+<a class="btn btn-primary py-3" onclick="document.getElementById('contact-form').submit();"><h4>Send</h4></a>
 </div>
 </div>
 </section>
