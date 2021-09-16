@@ -51,6 +51,32 @@ animation-delay:6s;
 animation-duration:1.5s;
 }
 
+.news {
+    width: 160px
+}
+
+.news-scroll a {
+    text-decoration: none;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 2px !important;
+    background-color: rgb(207, 23, 23);
+    border-radius: 50%;
+    display: inline-block;
+position:absolute;
+}
+
+
+.heading {
+    font-weight: bold;
+    font-size: 66px
+}
+
 </style>
 
 </head>
@@ -104,7 +130,7 @@ animation-duration:1.5s;
 <div class="col">
 <div class="d-flex breaking-news bg-white">
 <div class="d-flex justify-content-center bg-danger py-2 text-white px-1 news"><span class="d-flex">&nbsp;Latest News</span></div>
-<marquee class="news-scroll py-2 mh-25" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"><img src="./images.jpeg"></a> <span class="dot"></span> <a href="#"><img src="./images.jpeg"> </a> <span class="dot"></span> <a href="#"> <img src="./images.jpeg"> </a> </marquee>
+<marquee class="news-scroll py-2" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"><img src="./images.jpeg"></a> <span class="dot"></span> <a href="#"><img src="./images.jpeg"> </a> <span class="dot"></span> <a href="#"> <img src="./images.jpeg"> </a> </marquee>
 </div>
 </div>
 </div>
