@@ -12,135 +12,6 @@
 <style>
 
 
-
-
-
-// (c) 2020 Written by Simon Köhler in Panama
-// github.com/koehlersimon
-// simon-koehler.com
-
-// Setting the font family globally for this example
-// Please don't do this in a live website!
-*{
-  font-family: "Source Sans Pro", "Roboto", Arial, sans-serif;
-}
-
-// Animation to fade in the dropdown menus
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-// Assigning the above animation to all dropdown menus
-.dropdown-menu{
-    &.show{
-        -webkit-animation: fadeIn 0.3s alternate; /* Safari 4.0 - 8.0 */
-         animation: fadeIn 0.3s alternate;
-    }
-}
-
-// Mega Menu adjustments
-.nav-item.dropdown.dropdown-mega{
-    position: static;
-    .dropdown-menu{
-        width: 90%;
-        top: auto;
-        left: 5%;
-    }
-}
-
-// Complete styles for main navbar toggler and hamburger menu
-.navbar-toggler{
-    border: none;
-    padding: 0;
-    outline: none;
-    &:focus{
-        box-shadow: none;
-    }
-    .hamburger-toggle{
-        position: relative;
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        z-index: 11;
-        float: right;
-        .hamburger {
-            position: absolute;
-            transform: translate(-50%, -50%) rotate(0deg);
-            left: 50%;
-            top: 50%;
-            width: 50%;
-            height: 50%;
-            pointer-events: none;
-            span {
-                width: 100%;
-                height: 4px;
-                position: absolute;
-                background: #333;
-                border-radius: 2px;
-                z-index: 1;
-                transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0), background 0.2s cubic-bezier(0.77,0.2,0.05,1.0), all 0.2s ease-in-out;
-                left: 0px;
-                &:first-child{
-                    top: 10%;
-                    transform-origin: 50% 50%;
-                    transform: translate(0% -50%) !important;
-                }
-                &:nth-child(2){
-                    top: 50%;
-                    transform: translate(0,-50%);
-                }
-                &:last-child{
-                    left: 0px;
-                    top: auto;
-                    bottom: 10%;
-                    transform-origin: 50% 50%;
-                }
-            }
-            &.active{
-                span {
-                    position: absolute;
-                    margin: 0;
-                    &:first-child{
-                        top: 45%;
-                        transform: rotate(45deg);
-                    }
-                    &:nth-child(2){
-                        left: 50%;
-                        width: 0px;
-                    }
-                    &:last-child{
-                        top: 45%;
-                        transform: rotate(-45deg);
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-.icons{
-  display: inline-flex;
-  margin-left: auto;
-  a{
-    transition: all 0.2s ease-in-out;
-    padding: 0.2rem 0.4rem;
-    color: #ccc !important;
-    text-decoration: none;
-    &:hover{
-      color: white;
-      text-shadow: 0 0 30px white;
-    }
-  }
-}
-
-
-
-
-
-
-
 .author-container {
 width:100vw;
 height:100vw;
@@ -296,172 +167,25 @@ max-height:40px!important;
 </head>
 <body>
 
-
-<!--
-(c) 2020-2021 Written by Simon Köhler in Panama
-github.com/koehlersimon
-simon-koehler.com
-Last Update: July 30 2021 12:29pm, Panama
--->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Bootstrap <span class="badge bg-primary">v5.0.2</span></a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-        <div class="hamburger-toggle">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Multilevel</a>
-            <ul class="dropdown-menu shadow">
-              <li><a class="dropdown-item" href="#">Gallery</a></li>
-              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-              <li class="dropstart">
-                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Submenu Left</a>
-                <ul class="dropdown-menu shadow">
-                  <li><a class="dropdown-item" href=""> Third level 1</a></li>
-                  <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                  <li><a class="dropdown-item" href=""> Third level 3</a></li>
-                  <li><a class="dropdown-item" href=""> Third level 4</a></li>
-                  <li><a class="dropdown-item" href=""> Third level 5</a></li>
-                </ul>
-              </li>
-              <li class="dropend">
-                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Submenu Right</a>
-                <ul class="dropdown-menu shadow">
-                  <li><a class="dropdown-item" href=""> Second level 1</a></li>
-                  <li><a class="dropdown-item" href=""> Second level 2</a></li>
-                  <li><a class="dropdown-item" href=""> Second level 3</a></li>
-                  <li class="dropend">
-                    <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Let's go deeper!</a>
-                    <ul class="dropdown-menu dropdown-submenu shadow">
-                      <li><a class="dropdown-item" href=""> Third level 1</a></li>
-                      <li><a class="dropdown-item" href=""> Third level 2</a></li>
-                      <li><a class="dropdown-item" href=""> Third level 3</a></li>
-                      <li><a class="dropdown-item" href=""> Third level 4</a></li>
-                      <li><a class="dropdown-item" href=""> Third level 5</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href=""> Third level 5</a></li>
-                </ul>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown dropdown-mega position-static">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Megamenu</a>
-            <div class="dropdown-menu shadow">
-              <div class="mega-content px-4">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12 col-sm-4 col-md-3 py-4">
-                      <h5>Pages</h5>
-                      <div class="list-group">
-                        <a class="list-group-item" href="#">Accomodations</a>
-                        <a class="list-group-item" href="#">Terms & Conditions</a>
-                        <a class="list-group-item" href="#">Privacy</a>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-4 col-md-3 py-4">
-                      <h5>Card</h5>
-                      <div class="card">
-                  <img src="https://via.placeholder.com/320x180" class="img-fluid" alt="image">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-                    </div>
-                    <div class="col-12 col-sm-4 col-md-3 py-4">
-                      <h5>Lot of Pages</h5>
-                      <p>Lorem ipsum dolo sit achmet muhamed borlan de irtka.
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-3 py-4">
-                      <h5>Damn, so many</h5>
-                      <div class="list-group">
-                        <a class="list-group-item" href="#">Accomodations</a>
-                        <a class="list-group-item" href="#">Terms & Conditions</a>
-                        <a class="list-group-item" href="#">Privacy</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex ms-auto">
-            <div class="input-group">
-                <input class="form-control border-0 mr-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary border-0" type="submit">Search</button>
-            </div>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
 <div class="author-container preloader myfix placeholder-wave">
 <div class="author-pic d-flex align-items-center myfix placeholder justify-content-center">
 <img src="./download.png">
 </div>
 </div>
 
-<div class="fadeInRightBig container-fluid mx-0 gx-0 my-5 myfix placeholder">
+<div class="fadeInRightBig container-fluid gx-0 my-5 myfix placeholder">
     <div class="row">
         <div class="col">
             <div class="d-flex breaking-news bg-white">
                 <div class="d-flex justify-content-center bg-danger py-2 text-white px-1 news"><span class="d-flex">&nbsp;Latest News</span></div>
-                <marquee class="news-scroll py-2" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"><img src="./images.jpeg">The one and only </a> <span class="dot"></span> <a href="#"><img src="./images.jpeg"> </a> <span class="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a> </marquee>
+                <marquee class="news-scroll py-2 mh-25" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#"><img src="./images.jpeg">The one and only </a> <span class="dot"></span> <a href="#"><img src="./images.jpeg"> </a> <span class="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a> </marquee>
             </div>
         </div>
     </div>
 </div>
 
 
-    <div class="container-fluid border myfix placeholder mt-4">
-        <div class="row gx-0 mx-0">
-            <div class="col-12">
-                <form>
-                      <div class="row justify-content-center">
-                            <div class="col-12">
-                                <div class="row mt-0">
-                                    <div class="col-md-12">
-                                        <h1 class="text-center heading my-3">Get 10% off</h1>
-                                        <h2 class="text-center my-3">Subscribe to our newsletter & receive a coupon</h2>
-                                    </div>
-                                </div>
-                                <div class="form-group row my-3">
-                                    <div class="col-md-12 mb-0"> <input id="e-mail" type="text" placeholder="ENTER YOUR EMAIL" name="email" class="form-control input-box rm-border text-center"> </div>
-                                </div>
-                                <div class="form-group row d-flex align-items-center justify-content-center my-3 my-md-5">
-                                    <div class="col-md-12 text-center"> <input type="submit" value="GET IT NOW!" class="btn btn-block btn-black rm-border"> </div>
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
-                    
-                </form>
-            </div>
-</div>
-    </div>
+    
 
 <section class="mb-4 myfix placeholder">
 <div class="row">
@@ -515,18 +239,6 @@ setTimeout(function() {
 $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader").removeClass("preloader2");
 }, 6000);
 
-// (c) 2020 Written by Simon Köhler in Panama
-// github.com/koehlersimon
-// simon-koehler.com
-
-// No JavaScript needed for this example anymore!
-
-document.addEventListener('click',function(e){
-  // Hamburger menu
-  if(e.target.classList.contains('hamburger-toggle')){
-    e.target.children[0].classList.toggle('active');
-  }
-})
 </script>
 
 </body>
