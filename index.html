@@ -88,7 +88,7 @@ font-family: 'Titillium Web', sans-serif;
 }
 
 .yt {
-transition:40s cubic-bezier(.02,1,.64,.04);
+transition:5s cubic-bezier(.02,1,.64,.04);
 background:#fff;
 position:fixed;
 width:0%;
@@ -107,7 +107,7 @@ position:fixed;
 height:4px;
 top:0;
 left:0;
-transition:40s cubic-bezier(.02,1,.64,.04);
+transition:5s cubic-bezier(.02,1,.64,.04);
 z-index:999999999999;
 }
 
@@ -432,11 +432,6 @@ $('.yt').css('width','100%',function() {
 $('.yt').css('opacity','0');
 });
 });
-});
-
-$('.bar').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function(event) { 
-$('.bar').css('width','0%');
-$('.yt').css('width','0%');
 });
 </script>
 
