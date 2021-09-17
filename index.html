@@ -38,19 +38,7 @@ animation:bounceIn;
 animation-duration:0.3s;
 }
 
-.fadeIn-1 {
-animation:fadeIn;
-animation-delay:5.9s;
-animation-duration:2.5s;
-}
-
-.fadeIn-2 {
-animation:fadeIn;
-animation-delay:5.9s;
-animation-duration:2.5s;
-}
-
-.fadeIn-3 {
+.fadeIn {
 animation:fadeIn;
 animation-delay:5.9s;
 animation-duration:2.5s;
@@ -118,6 +106,18 @@ left:0;
 min-width: 100%;
 min-height: 100%;
 filter:brightness(70%);
+}
+
+.preloader {
+position: fixed; 
+width:100%;
+height:100%;
+z-index: 9999999;
+background:url("./download.png"); 
+background-color: #FFF; 
+background-repeat: no-repeat;
+background-position:center;
+align-items:center;
 }
 
 .navbar {
@@ -229,10 +229,12 @@ opacity: 0.5;
 </div>
 </nav>
 
+<div class='preloader'/></div>
+
 <div class="container-fluid my-5 myfix placeholder">
 <div class="row g-4">
 <div class="col-12 col-md-4">
-<div class="card fadeIn-1" style="width: auto;">
+<div class="card fadeIn" style="width: auto;">
 <img src="./images_1.jpeg" class="card-img-top">
 <div class="card-body">
 <h5 class="card-title">Card title</h5>
@@ -250,7 +252,7 @@ opacity: 0.5;
 </div>
 </div>
 <div class="col-12 col-md-4">
-<div class="card fadeIn-2" style="width: auto;">
+<div class="card fadeIn" style="width: auto;">
 <img src="./images_1.jpeg" class="card-img-top">
 <div class="card-body">
 <h5 class="card-title">Card title</h5>
@@ -262,13 +264,13 @@ opacity: 0.5;
 <li class="list-group-item">A third item</li>
 </ul>
 <div class="card-body">
-<a href="#" class="btn btn-primary">Buy Now</a> 
-<a href="#" class="btn btn-primary">Know More</a> 
+<a href="#" class="bar1 btn btn-primary">Buy Now</a> 
+<a href="#" class="bar1 btn btn-primary">Know More</a> 
 </div>
 </div>
 </div>
 <div class="col-12 col-md-4">
-<div class="card fadeIn-3" style="width: auto;">
+<div class="card fadeIn" style="width: auto;">
 <img src="./images_1.jpeg" class="card-img-top">
 <div class="card-body">
 <h5 class="card-title">Card title</h5>
@@ -280,8 +282,8 @@ opacity: 0.5;
 <li class="list-group-item">A third item</li>
 </ul>
 <div class="card-body">
-<a href="#" class="btn btn-primary">Buy Now</a> 
-<a href="#" class="btn btn-primary">Know More</a> 
+<a href="#" class="bar1 btn btn-primary">Buy Now</a> 
+<a href="#" class="bar1 btn btn-primary">Know More</a> 
 </div>
 </div>
 </div>
@@ -403,11 +405,6 @@ opacity: 0.5;
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-<script>
-setTimeout(function() {
-$(".myfix1").removeClass("authorfix1");
-}, 6000);
-</script>
 
 <script>
 setTimeout(function() {
