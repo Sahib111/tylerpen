@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -13,19 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet"/>
 
 <style>
-
-.preloader {
-position:absolute;
-width:100%;
-height:100%;
-background:url("./download.png") no-repeat;
-background-color:#fff;
-}
-
-.author-pic {
-width:100vw;
-height:100vh;
-}
 
 .placeholder {
 opacity:0;
@@ -294,24 +281,6 @@ $(".myfix1").removeClass("authorfix1");
 setTimeout(function() {
 $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
 }, 6000);
-</script>
-
-<script>
-const toggler = document.querySelector('.navbar > .toggler'),
-  navListContainer = document.querySelector('.navbar > .nav-list-container');
-
-/*when toggler button is clicked*/
-toggler.addEventListener(
-  "click",
-  () => {
-    //convert hamburger to close
-    toggler.classList.toggle('cross');
-    //make nav visible
-    navListContainer.classList.toggle('nav-active');
-  },
-  true
-);
-
 </script>
 </body>
 </html>
