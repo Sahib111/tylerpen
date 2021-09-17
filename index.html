@@ -113,7 +113,7 @@ top:0;
 left:0;
 min-width: 100%;
 min-height: 100%;
-opacity:0.3;
+opacity:0.4;
 }
 
 .preloader {
@@ -215,7 +215,7 @@ opacity: 0.5;
 <span class="bar placeholder-wave"></span> 
 </div>
 
-<div class="myfix preloader placeholder-wave"></div>
+<div class="myfix curtain"><div class="myfix preloader placeholder-wave"></div></div>
 
 <video loop muted autoplay class="fullscreenvideo position-fixed">
 <source src="./sea.mp4" type="video/mp4">
@@ -416,7 +416,7 @@ opacity: 0.5;
 
 <script>
 setTimeout(function() {
-$(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
+$(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader").removeClass("curtain");
 }, 6000);
 </script>
 
