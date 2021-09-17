@@ -343,16 +343,18 @@ $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeCla
 <script>
 $(document).ready(function() {
 $('.bar1').click(function() {
-$('.bar').each(function() {
-$('.bar').css('width','100%');
+$('.bar').css('opacity','1');
+$('.bar').css('width','100%',function() {
+$('.bar').css('opacity','0');
 });
 });
 });
 
 $(document).ready(function() {
 $('.bar1').click(function() {
-$('.yt').each(function() {
-$('.yt').css('width','100%',);
+$('.yt').css('opacity','1');
+$('.yt').css('width','100%',function() {
+$('.yt').css('opacity','0');
 });
 });
 });
