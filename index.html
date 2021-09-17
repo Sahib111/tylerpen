@@ -63,35 +63,64 @@ animation-duration:2.5s;
 }
 
 .news {
-    width: 160px;
+width: 160px;
 }
 
 .news-scroll a {
-    text-decoration: none;
+text-decoration: none;
 }
 
 .dot {
-    height: 6px;
-    width: 6px;
-    margin-left: 3px;
-    margin-right: 3px;
-    margin-top: 2px !important;
-    background-color: rgb(207, 23, 23);
-    border-radius: 50%;
-    display: inline-block;
+height: 6px;
+width: 6px;
+margin-left: 3px;
+margin-right: 3px;
+margin-top: 2px !important;
+background-color: rgb(207, 23, 23);
+border-radius: 50%;
+display: inline-block;
 }
 
 .heading {
-    font-weight: bold;
-    font-size: 44px;
+font-weight: bold;
+font-size: 44px;
 font-family: 'Titillium Web', sans-serif;
 }
+
+.yt {
+transition:0.5s cubic-bezier(.02,1,.64,.04);
+background:#fff;
+position:fixed;
+width:0%;
+top:0;
+left:0;
+display:inline-block;
+height:4px;
+z-index:99999999999;
+}
+
+.bar {
+background-color:#E3242B;
+display:inline-block;
+width:0%;
+position:fixed;
+height:4px;
+top:0;
+left:0;
+transition:0.5s cubic-bezier(.02,1,.64,.04);
+z-index:999999999999;
+}
+
 
 
 </style>
 
 </head>
 <body>
+
+<div class="yt">
+<span class="bar placeholder-wave"></span> 
+</div>
 
 <div class="container-fluid my-5 myfix placeholder">
 <div class="row g-4">
@@ -108,8 +137,8 @@ font-family: 'Titillium Web', sans-serif;
 <li class="list-group-item">A third item</li>
 </ul>
 <div class="card-body">
-<a href="#" class="btn btn-primary">Buy Now</a> 
-<a href="#" class="btn btn-primary">Know More</a> 
+<a href="#" class="bar1 btn btn-primary">Buy Now</a> 
+<a href="#" class="bar1 btn btn-primary">Know More</a> 
 </div>
 </div>
 </div>
@@ -281,6 +310,29 @@ $(".myfix1").removeClass("authorfix1");
 setTimeout(function() {
 $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader");
 }, 6000);
+</script>
+
+<script>
+$(document).ready(function() {
+$('.bar1').click(function() {
+$('.bar').each(function() {
+$('.bar').css('width','100%');
+});
+});
+});
+
+$(document).ready(function() {
+$('.bar1').click(function() {
+$('.yt').each(function() {
+$('.yt').css('width','100%',);
+});
+});
+});
+
+$('.bar').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function(event) { 
+$('.bar').fadeOut(3000);
+$('.yt').fadeOut(3000);
+});
 </script>
 </body>
 </html>
