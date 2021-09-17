@@ -111,14 +111,26 @@ transition:40s cubic-bezier(.02,1,.64,.04);
 z-index:999999999999;
 }
 
-</style>
+.fullscreenvideo{
+z-index:-1000000;
+top:0;
+left:0;
+min-width: 100%;
+min-height: 100%;
+filter:brightness(70%);
+}
 
+</style>
 </head>
 <body>
 
 <div class="yt">
 <span class="bar placeholder-wave"></span> 
 </div>
+
+<video loop muted autoplay class="fullscreenvideo position-fixed">
+<source src="./sea.mp4" type="video/mp4">
+</video>
 
 <nav class="navbar">
 <button class="toggler">
