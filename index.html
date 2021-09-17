@@ -89,7 +89,7 @@ font-family: 'Titillium Web', sans-serif;
 
 .yt {
 opacity:0;
-transition:5s cubic-bezier(.02,1,.64,.04);
+transition:0.2s cubic-bezier(.02,1,.64,.04);
 background:#fff;
 position:fixed;
 width:0%;
@@ -109,7 +109,7 @@ position:fixed;
 height:4px;
 top:0;
 left:0;
-transition:5s cubic-bezier(.02,1,.64,.04);
+transition:0.2s cubic-bezier(.02,1,.64,.04);
 z-index:999999999999;
 }
 
@@ -420,20 +420,19 @@ $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeCla
 <script>
 $(document).ready(function() {
 $('.bar1').click(function() {
-$('.bar').css('opacity','1');
-$('.bar').css('width','100%',function() {
-$('.bar').css('opacity','0');
-});
+$('.bar').css('width','100%');
 });
 });
 
 $(document).ready(function() {
 $('.bar1').click(function() {
-$('.yt').css('opacity','1');
-$('.yt').css('width','100%',function() {
-$('.yt').css('opacity','0');
+$('.yt').css('width','100%');
 });
 });
+
+$('.bar').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function(event) { 
+$('.bar').css('width','0%');
+$('.yt').css('width','0%');
 });
 </script>
 
