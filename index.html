@@ -193,10 +193,10 @@ opacity: 0.5;
   width: 0;
   position: fixed;
   z-index: 666000666;
-  -webkit-transition:width 2500ms ease-out, height 500ms ease-out;
-  -moz-transition:width 2500ms ease-out, height 500ms ease-out;
-  -o-transition:width 2500ms ease-out, height 500ms ease-out;
-  transition:width 2500ms ease-out, height 500ms ease-out;
+  -webkit-transition:width 2500ms ease-out, height 2500ms ease-out;
+  -moz-transition:width 2500ms ease-out, height 2500ms ease-out;
+  -o-transition:width 2500ms ease-out, height 2500ms ease-out;
+  transition:width 2500ms ease-out, height 2500ms ease-out;
 
 }
 
@@ -210,8 +210,6 @@ opacity: 0.5;
 #loading-bar.top, #loading-bar.bottom, #loading-bar.left { left: 0;}
 #loading-bar.top, #loading-bar.left, #loading-bar.right { top: 0;}
 #loading-bar.left, #loading-bar.right { width: 5px; height: 0; }
-#loading-bar.bottom { bottom: 0; }
-#loading-bar.right { right:0; }
 
 </style>
 </head>
@@ -461,7 +459,7 @@ jQuery(function($) {
      * Waits until css transition is finished and removes element from the DOM
      */
     setTimeout( function() {
-      $("#loading-bar").fadeOut(4000, function() {
+      $("#loading-bar").fadeOut(8000, function() {
         $(this).remove();
       });
     }, 300);
