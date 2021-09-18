@@ -14,14 +14,6 @@
 
 <style>
 
-.curtain {
-z-index:-10000000;
-background-color:#000;
-color:#000;
-width:100vw;
-height:100vh;
-}
-
 .placeholder {
 opacity:0;
 }
@@ -224,7 +216,7 @@ opacity: 0.5;
 <body>
 
   
-<div class="myfix curtain"><div class="myfix preloader placeholder-wave"></div></div>
+<div class=""><div class="myfix preloader placeholder-wave"></div></div>
 
 <video loop muted autoplay class="fullscreenvideo position-fixed">
 <source src="./sea.mp4" type="video/mp4">
@@ -248,7 +240,7 @@ opacity: 0.5;
 </div>
 </nav>
 
-<div class="myfix placeholder curtain"><div class="postloader"><div class="postloader2"></div></div></div>
+<div class="myfix placeholder"><div class="postloader"><div class="postloader2"></div></div></div>
 
 <div class="container-fluid my-5 myfix">
 <div class="row g-4 myfix placeholder">
@@ -427,7 +419,7 @@ opacity: 0.5;
 
 <script>
 setTimeout(function() {
-$(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader").removeClass("curtain");
+$(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader").removeClass("postloader");
 }, 6000);
 </script>
 
