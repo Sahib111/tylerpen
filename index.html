@@ -104,6 +104,17 @@ background-position:center;
 align-items:center;
 }
 
+.postloader {
+position: absolute; 
+width:100vw;
+height:100vh;
+background:url("./download.png"); 
+background-color: #FFF; 
+background-repeat: no-repeat;
+background-position:center;
+align-items:center;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -217,7 +228,7 @@ opacity: 0.5;
   
 <div class="myfix curtain"><div class="myfix preloader placeholder-wave"></div></div>
 
-<div class="myfix placeholder curtain"><div class="preloader"></div></div>
+<div class="myfix placeholder curtain"><div class="postloader"></div></div>
 
 
 <video loop muted autoplay class="fullscreenvideo position-fixed">
