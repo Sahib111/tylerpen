@@ -83,30 +83,6 @@ font-size: 44px;
 font-family: 'Titillium Web', sans-serif;
 }
 
-.yt {
-transition:3s cubic-bezier(.02,1,.64,.04);
-background:#fff;
-position:fixed;
-width:0%;
-top:0;
-left:0;
-display:inline-block;
-height:5px;
-z-index:99999999999;
-}
-
-.bar {
-background-color:#E3242B;
-display:inline-block;
-width:0%;
-position:fixed;
-height:5px;
-top:0;
-left:0;
-transition:3s cubic-bezier(.02,1,.64,.04);
-z-index:999999999999;
-}
-
 .fullscreenvideo{
 z-index:-1000000;
 top:0;
@@ -207,13 +183,60 @@ opacity: 0.5;
   opacity: 1;
 }
 
+#main {
+  margin-top: 20px;
+}
+
+#loading-bar {
+  
+  background-color: #f00;
+  height: 5px;
+  width: 0;
+  position: fixed;
+  z-index: 666000666;
+  -webkit-transition:width 500ms ease-out, height 500ms ease-out;
+  -moz-transition:width 500ms ease-out, height 500ms ease-out;
+  -o-transition:width 500ms ease-out, height 500ms ease-out;
+  transition:width 500ms ease-out, height 500ms ease-out;
+
+}
+
+#loading-bar.no-transition { 
+  -webkit-transition:none;
+  -moz-transition:none;
+  -o-transition:none;
+  transition:none;
+}
+
+#loading-bar.top, #loading-bar.bottom, #loading-bar.left { left: 0;}
+#loading-bar.top, #loading-bar.left, #loading-bar.right { top: 0;}
+#loading-bar.left, #loading-bar.right { width: 5px; height: 0; }
+#loading-bar.bottom { bottom: 0; }
+#loading-bar.right { right:0; }
+
 </style>
 </head>
 <body>
 
-<div class="yt">
-<span class="bar placeholder-wave"></span> 
-</div>
+  <div id="main" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="section-ajax">
+          <h1 class="page-header">Ajax call</h1>
+          <a class="btn btn-action btn-primary" data-action="load">Simulate Ajax call</a>  
+        </div>
+        
+        <div id="section-position">
+          <h1 class="page-header">Bar position <small>top</small></h1>
+          <a class="btn btn-action btn-warning" data-action="position" data-position="top" data-direction="width">Top</a>
+          <a class="btn btn-action btn-warning" data-action="position" data-position="bottom" data-direction="width">Bottom</a>
+          <a class="btn btn-action btn-warning" data-action="position" data-position="left" data-direction="height">Left</a>
+          <a class="btn btn-action btn-warning" data-action="position" data-position="right" data-direction="height">Right</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 <div class="myfix curtain"><div class="myfix preloader placeholder-wave"></div></div>
 
@@ -421,29 +444,100 @@ $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeCla
 </script>
 
 <script>
-$(document).ready(function() {
-$('.bar1').click(function() {
-$('.bar').each(function() {
-$('.bar').css('width','100%');
-});
-});
+jQuery(function($) {
+  
+  //Watch all ajax activity
+  $(document).ajaxStart(function() {
+    
+    if ($('#loading-bar').length === 0) {
+
+      $('body').append( $('<div/>').attr('id', 'loading-bar').addClass(_lb.position) );
+
+      /**
+       * Random loading bar initial percentage
+       */
+      _lb.percentage = Math.random() * 30 + 30;
+      $("#loading-bar")[_lb.direction](_lb.percentage + "%");
+
+      /**
+       * Bump loading percentage between current and 99%
+       */
+      _lb.interval = setInterval(function() {
+        
+        _lb.percentage = Math.random() * ( (100-_lb.percentage) / 2 ) + _lb.percentage;
+        
+        $("#loading-bar")[_lb.direction](_lb.percentage + "%");
+        
+      }, 500);
+
+    }
+
+  }).ajaxStop(function() {
+    
+    clearInterval(_lb.interval);
+    $("#loading-bar")[_lb.direction]("101%");
+
+    /**
+     * Waits until css transition is finished and removes element from the DOM
+     */
+    setTimeout( function() {
+      $("#loading-bar").fadeOut(300, function() {
+        $(this).remove();
+      });
+    }, 300);
+
+  });
+
 });
 
-$(document).ready(function() {
-$('.bar1').click(function() {
-$('.yt').each(function() {
-$('.yt').css('width','100%',);
-});
-});
-});
+/**
+ * Main object
+ */
+var _lb = {}
 
-$('.bar').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function(event) { 
-$('.bar').fadeOut(3000,function() {
-$(this).remove();
-});
-$('.yt').fadeOut(3000,function() {
-$(this).remove();
-});
+//Default loading bar position
+_lb.position  = 'top';
+_lb.direction = 'width'
+
+/**
+ * Ajax call
+ * accepts callback( response )
+ */
+_lb.get = function( callback ) {
+
+  _lb.loading = true;
+
+  jQuery.ajax({
+    url   : this.href,
+    success: function(response) {
+      _lb.loading = false;
+      if ( typeof(callback) === 'function'  )
+        callback( response );
+    }
+  });
+
+}
+
+jQuery(function($) {
+  
+  $('.btn-action').click(function() {
+
+    switch ( $(this).data('action') ) {
+
+      case 'load':
+        _lb.get();
+        break;
+
+      case 'position':
+        _lb.position  = $(this).data('position');
+        _lb.direction = $(this).data('direction');
+        $('#section-position h1 small').html( _lb.position );
+        break;
+
+    }
+
+  });
+
 });
 </script>
 
