@@ -69,7 +69,6 @@ filter:brightness(50%);
 }
 
 .preloader {
-padding:auto;
 position: fixed;
 width:100%;
 height:100%;
@@ -83,8 +82,6 @@ overflow:hidden;
 }
 
 .postloader {
-padding:0;
-margin:0;
 width:100vw;
 height:100vh;
 filter:none!important;
@@ -525,13 +522,13 @@ background-color:#fff;
 </head>
 <body>
   
-<div class="myfix preloader placeholder-wave">
+<div class="myfix preloader placeholder-wave"></div>
 <div class="postloader">
 <div class="postloader2">
-</div></div></div>
+</div></div>
 
 <div class="myfix placeholder">
-<video loop muted autoplay class="fullscreenvideo position-fixed" style="animation-duration:0s!important;">
+<video loop muted autoplay class="fullscreenvideo position-fixed">
 <source src="./sea.mp4" type="video/mp4">
 </video>
 </div>
