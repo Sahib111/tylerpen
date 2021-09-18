@@ -193,11 +193,10 @@ opacity: 0.5;
   width: 0;
   position: fixed;
   z-index: 666000666;
-  -webkit-transition:width 1200ms ease-out, height 1200ms ease-out;
-  -moz-transition:width 1200ms ease-out, height 1200ms ease-out;
-  -o-transition:width 1200ms ease-out, height 1200ms ease-out;
-  transition:width 1200ms ease-out, height 1200ms ease-out;
-
+  -webkit-transition:width 2000ms ease-out;
+  -moz-transition:width 2000ms ease-out;
+  -o-transition:width 2000ms ease-out;
+  transition:width 2000ms ease-out;
 }
 
 #loading-bar.no-transition { 
@@ -459,10 +458,10 @@ jQuery(function($) {
      * Waits until css transition is finished and removes element from the DOM
      */
     setTimeout( function() {
-      $("#loading-bar").fadeOut(5000, function() {
+      $("#loading-bar").fadeOut(3500, function() {
         $(this).remove();
       });
-    }, 3000);
+    }, 2000);
 
   });
 
