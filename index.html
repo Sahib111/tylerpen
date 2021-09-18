@@ -86,8 +86,8 @@ position: fixed;
 width:100%!important;
 height:100%!important;
 z-index: 9999999;
-background:url("./download.png"); 
 background-color: #FFF; 
+background:url("./download.png"); 
 background-repeat: no-repeat;
 background-position:center;
 align-items:center;
@@ -97,11 +97,21 @@ align-items:center;
 display:block;
 width:100vw;
 height:100vh;
-background:url("./download.png"); 
 background-color: #FFF; 
+background:url("./download.png"); 
 background-repeat: no-repeat;
 background-position:center;
 align-items:center;
+}
+
+.postloader2 {
+background:url("./download.png"); 
+background-repeat: no-repeat;
+background-position:center;
+align-items:center;
+animation:zoomIn;
+animation-delay:6.1s;
+animation-duration:3s;
 }
 
 .navbar {
@@ -235,7 +245,7 @@ opacity: 0.5;
 </div>
 </nav>
 
-<div class="myfix placeholder curtain zoomIn"><div class="postloader"></div></div>
+<div class="myfix placeholder curtain"><div class="postloader"><div class="postloader2"></div></div></div>
 
 <div class="container-fluid my-5 myfix">
 <div class="row g-4 myfix placeholder">
