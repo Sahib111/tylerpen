@@ -16,7 +16,7 @@
 
 .curtain {
 z-index:-10000000;
-background-color:#fff;
+background-color:#000;
 color:#fff;
 width:100vw;
 height:100vh;
@@ -445,9 +445,25 @@ $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeCla
 </script>
 
 <script>
+$(document).ready(function() {
 $('.bar1').click(function() {
-$(".bar1").addClass(".bar0");
-$(".bar1").addClass(".yt0");
+$('.bar').each(function() {
+$('.bar').css('width','100%');
+});
+});
+});
+
+$(document).ready(function() {
+$('.bar1').click(function() {
+$('.yt').each(function() {
+$('.yt').css('width','100%',);
+});
+});
+});
+
+$('.bar').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function(event) { 
+$('.bar').fadeOut(3000);
+$('.yt').fadeOut(3000);
 });
 </script>
 
