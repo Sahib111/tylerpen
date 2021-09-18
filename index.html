@@ -107,6 +107,30 @@ transition:3s cubic-bezier(.02,1,.64,.04);
 z-index:999999999999;
 }
 
+.yt0 {
+transition:3s cubic-bezier(.02,1,.64,.04);
+background:#fff;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:inline-block;
+height:15px;
+z-index:99999999999;
+}
+
+.bar0{
+background-color:#E3242B;
+display:inline-block;
+width:100%;
+position:fixed;
+height:15px;
+top:0;
+left:0;
+transition:3s cubic-bezier(.02,1,.64,.04);
+z-index:999999999999;
+}
+
 .fullscreenvideo{
 z-index:-1000000;
 top:0;
@@ -421,8 +445,10 @@ $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeCla
 </script>
 
 <script>
-
-
+$('.bar1').click(function() {
+$(".bar").toggle();
+$(".yt").toggle();
+});
 </script>
 
 <script>
