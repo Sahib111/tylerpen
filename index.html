@@ -422,21 +422,21 @@ $(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeCla
 
 <script>
 $(document).ready(function() {
+$('.bar1').each(function() {
 $('.bar1').click(function() {
 $('.bar').css('width','100%');
 });
 });
+});
 
 $(document).ready(function() {
+$('.bar1').each(function() {
 $('.bar1').click(function() {
 $('.yt').css('width','100%');
 });
 });
-
-$('.bar').on('transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd', function(event) { 
-$('.bar').css('width','0%');
-$('.yt').css('width','0%');
 });
+
 </script>
 
 <script>
