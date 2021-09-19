@@ -380,8 +380,8 @@ color:#FFFFFF;
 /*----------- menu-icon ----------------*/
 .menu-icon-wrapper {
 float:right;
-bottom:20px;
-right:20px;
+top:20px;
+left:20px;
 position:fixed;
 z-index:1054;
 }
@@ -515,11 +515,31 @@ padding:2%;
 </style>
 </head>
 <body>
- 
+
+<div class='menu-icon-wrapper myfix placeholder-wave placeholder'>
+<div style='text-align:center; bottom:-40px;'/>
+<div class='menu-icon' onclick='toggleCssMenu(this)'>		
+<div class='three-line'>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div id='cssmenu'>
+<ul>
+<li><a href='#'>Home</a></li>
+<li><a href='#'>About Us</a></li>
+<li><a href='#'>Privacy Policy</a></li>
+<li><a href='#'>Terms and Conditions</a></li>
+</ul>
+</div>
+</div>
+
 <div class="myfix preloader placeholder-wave mb-5">
 <div class="postloader">
 <div class="postloader2">
-<span class="text-dark h1">THIS IS ME</span>
+<div class="text-dark h1" style="z-index:99999;">THIS IS ME</div>
 </div></div></div>
 
 <div class="container-fluid mb-5 myfix">
@@ -698,26 +718,6 @@ padding:2%;
 </div>
 </div>
 </footer>
-
-<div class='menu-icon-wrapper myfix placeholder-wave placeholder'>
-<div style='text-align:center; bottom:-40px;'/>
-<div class='menu-icon' onclick='toggleCssMenu(this)'>		
-<div class='three-line'>
-<span></span>
-<span></span>
-<span></span>
-</div>
-</div>
-</div>
-<div id='cssmenu'>
-<ul>
-<li><a href='#'>Home</a></li>
-<li><a href='#'>About Us</a></li>
-<li><a href='#'>Privacy Policy</a></li>
-<li><a href='#'>Terms and Conditions</a></li>
-</ul>
-</div>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
