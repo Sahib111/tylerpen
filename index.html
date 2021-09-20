@@ -540,20 +540,6 @@ font-size:50px;
 font-family: 'Domine', serif;
 }
 
-.bi-star {
-border:#ffdf00;
-font-size:1rem;
-padding:2px;
-}
-
-.bi-star-fill,
-.bi-star-half {
-color:#e8d131;
-border:#ffdf00;
-font-size:1rem;
-padding:2px;
-}
-
 </style>
 </head>
 <body>
@@ -587,7 +573,9 @@ padding:2px;
 <li class="list-group-item">Language: English</li>
 <li class="list-group-item">Genre: Adventure</li>
 <li class="list-group-item">Format: Pdf</li>
-<li class="list-group-item">Ratings: <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-half"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i></li>
+<li class="list-group-item">Ratings: <div class="container">
+<span id="rateMe4"  class="feedback"></span>
+</div>
 </ul>
 <li><hr class="dropdown-divider"></li>
 </ul>
@@ -984,6 +972,12 @@ $(function() {
     e.preventDefault();
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  $('#rateMe4').mdbRate();
 });
 </script>
 
