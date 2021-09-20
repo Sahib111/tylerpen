@@ -525,58 +525,14 @@ width:125%;
 }
 
 .dropdown-menu li {
-text-align:center;
+text-align:left;
 }
 
 dropdown-divider {
 opacity:0.3;
 }
 
-#scroll a {
-  padding-top: 60px;
-}
-#scroll a span {
-  position: absolute;
-  top: 80%;
-  left: 48%;
-  width: 50px;
-  height: 50px;
-  margin-left: -12px;
-  border-left: 5px solid #000;
-  border-bottom: 5px solid #000;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: scrollable 1s infinite;
-  animation: scrollable 1s infinite;
-  box-sizing: border-box;
-  animation:zoomInDown;
-  animation-delay:6s;
-  animation-duration:2s;
-}
-@-webkit-keyframes scrollable {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-  }
-  20% {
-    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-  }
-  40% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-  }
-}
-@keyframes scrollable {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-  }
-  20% {
-    transform: rotate(-45deg) translate(-10px, 10px);
-  }
-  40% {
-    transform: rotate(-45deg) translate(0, 0);
-  }
-}
-
-#scroll .h11 {
+.h11 {
 font-size:50px;
 }
 
@@ -589,7 +545,7 @@ font-family: 'Domine', serif;
 <body>
 
 <div class="myfix preloader placeholder-wave mb-5">
-<div id="scroll" class="postloader2 myfix placeholder">
+<div class="postloader2 myfix placeholder">
 <center><h1 class="h11 text-dark d-none d-md-block" style="z-index:999999999;padding-top:110%;animation:fadeInDown;animation-delay:6s;animation-duration:1s;"><strong style="font-family: 'Dancing Script', cursive;font-size:65px;">Welcome to my private author page</strong><br/><br/><a href="#cards">Check out my collection<br/><i class="bi bi-chevron-down"></i></a></h1></center>
 <center><h1 class="text-dark d-block d-md-none" style="z-index:999999999;padding-top:135%;animation:fadeInDown;animation-delay:6s;animation-duration:1s;"><strong style="font-family: 'Dancing Script', cursive;font-size:45px;">Welcome to my private author page</strong><br/><br/><a href="#cards">Check out my collection<br/><i class="bi bi-chevron-down"></i></a></h1></center>
 </div>
@@ -615,7 +571,7 @@ font-family: 'Domine', serif;
 <li><hr class="dropdown-divider"></li>
 <li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit.</li>
 <li><hr class="dropdown-divider"></li>
-<ul class="list-group list-group-flush w-75 mx-0 px-0">
+<ul class="list-group list-group-flush w-100">
 <li class="list-group-item">An item</li>
 <li class="list-group-item">A second item</li>
 <li class="list-group-item">A third item</li>
