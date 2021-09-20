@@ -576,8 +576,7 @@ font-family: 'Domine', serif;
 <li class="list-group-item">Language: English</li>
 <li class="list-group-item">Genre: Adventure</li>
 <li class="list-group-item">Format: Pdf</li>
-<li class="list-group-item">Ratings: <label for="input-5" class="control-label">Rate This</label>
-<input id="input-5" name="input-5" class="rating-loading" data-show-clear="false" data-show-caption="true">
+<li class="list-group-item">Ratings: <input id="input-3-ltr-star-md" name="input-3-ltr-star-md" class="kv-ltr-theme-fas-star rating-loading" value="3" dir="ltr" data-size="md">
 
 </ul>
 <li><hr class="dropdown-divider"></li>
@@ -978,12 +977,15 @@ $(function() {
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
-    $('#input-5').rating({clearCaption: 'No stars yet'});
+    $('.kv-ltr-theme-fas-star').rating({
+        hoverOnClear: false,
+        theme: 'krajee-fas',
+        containerClass: 'is-star'
+    });
 });
 </script>
-
-<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js" type="text/javascript"></script>
 </body>
 </html>
