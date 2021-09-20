@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet">
+<style>
+
+.placeholder {
+opacity:0;
+max-width:100%;
+overflow:hidden;
+}
+
+.placeholder-wave {
+-webkit-mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0) 75%,#000 95%);
+mask-image:linear-gradient(130deg,#000 55%,rgba(0,0,0,0) 75%,#000 95%);
+-webkit-mask-size:200% 100%;
+mask-size:200% 100%;
+-webkit-animation:placeholder-wave 1s linear infinite;
+animation:placeholder-wave 1s linear infinite;
+}
+ 
+.bounceIn {
+animation:bounceIn;
+animation-delay:6s;
+animation-duration:4s;
+}
+
+.news {
+width: 160px;
+animation-duration:4s;
+font-family: 'Koh Santepheap', cursive;
+}
+
+.news-scroll a {
+text-decoration: none;
+animation-duration:10s;
+}
+
+.dot {
+height: 6px;
+width: 6px;
+margin-left: 3px;
+margin-right: 3px;
+margin-top: 2px !important;
+background-color: rgb(207, 23, 23);
+border-radius: 50%;
+display: inline-block;
+}
+
+.heading {
+font-weight: bold;
+font-size: 44px;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.preloader {
+position: fixed;
+width:100vw;
+height:100vh;
+z-index: 9999999;
+background:url("./download.png"); 
+background-repeat: no-repeat;
+background-position:center;
+align-items:center;
+overflow:hidden;
+}
+
+.postloader {
+background:#fff;
+margin-top:-20%;
+height:100vh;
+filter:none!important;
+}
+
+.postloader2 {
+display:block;
+width:100%;
+height:100%;
+z-index:99;
+background:url("./download.png"); 
+background-repeat: no-repeat;
+background-position:center;
+}
+
+#menuDemo {
+text-align:center; 
+padding:30px 8px; 
+position:fixed;
+bottom:15px;
+right:22px;
+width:100%;
+z-index:100000000;
+}
+
+#cssmenu{
+position:fixed;
+z-index:1;
+display:block;
+line-height:1.2;
+width:auto;
+display:block;
+text-align:center;
+font-family:Spectral;
+}
+
+#cssmenu::before{
+position:absolute;
+content:"";
+z-index:-1;
+top:0;
+bottom:0;
+left:0;
+right:0;
+width:100%;
+height:100%;
+background: url("https://ik.imagekit.io/sahibkapoor111/IMG-20210906-WA0137_CxWqy7zCVl.jpg?updatedAt=1631038102306");
+background-size: cover;
+filter:brightness(30%);
+display:block;
+}
+
+#cssmenu ul {
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+width:auto;
+display:block;
+font-size:0;
+text-align:center;
+color:#FFFFFF;
+background-color: #000;
+border: #000000;
+margin:0px; 
+padding:0px;
+list-style:none;
+position:relative;
+z-index:999999990;
+border-radius: 3px;
+} 
+
+#cssmenu li {
+display:inline-block;
+line-height:1.2;
+position:relative;    
+font-size:0; 
+margin:0;
+padding:6px;
+font-family: 'Hind Siliguri', sans-serif;
+}
+
+/*Top level items
+
+---------------------------------------*/
+
+#cssmenu >ul>li>span, #cssmenu >ul>li>a {   
+font-size:30px;
+color:inherit;
+text-decoration:none;
+padding:12px 20px; 
+font-weight:700;
+text-transform:none;
+letter-spacing:normal;   
+display:block;   
+position:relative;
+transition:all 0.3s;
+}
+
+#cssmenu li:hover > span, #cssmenu li:hover > a {  
+-webkit-text-stroke-width:;
+-webkit-text-stroke-color:;
+letter-spacing:3px;
+transition:0.3s;
+color:#428fcf;
+font-size:11vw;
+font-weight:900!important;
+margin-left:1vw;
+margin-right:1vw;
+}
+
+/*Sub level items
+---------------------------------------*/
+#cssmenu .dropdown
+{
+    text-align:left;
+    left:0;
+    font-family:inherit;
+    color: #CCCCCC;
+    background-color:#222222;
+    border:none;
+    position:absolute;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display:none;
+    opacity:0;
+    cursor:default;
+}
+
+#cssmenu .dropdown li {
+    display: block;  
+}
+
+#cssmenu .dropdown li > span, #cssmenu .dropdown li > a, #cssmenu .clm a, #cssmenu .clm h3 
+{
+    font-size:18px;
+    font-weight:400;
+    font-family:inherit;
+    margin:0;
+    padding:12px 20px; 
+    display:block;
+    color:inherit;
+    text-decoration:none;
+}
+#cssmenu .clm h3 {
+    font-size:20px;
+    font-weight:700;
+}
+#cssmenu .sub-item {
+    background-color:#222222;
+    position:relative;       
+    transition:all 0.3s;
+}
+
+#cssmenu .dropdown li:hover > span, #cssmenu .dropdown li:hover > a
+{
+color:#FFFFFF;
+    background-color:#222222;
+}
+
+#cssmenu .clm a:hover
+{
+    color:#FFFFFF;
+    transition:color 0.2s;
+}
+
+#cssmenu .dropdown.right0 {left:auto;right:0;} 
+#cssmenu .dropdown li > .dropdown.right0 {left:auto;right:100%;} 
+       
+#cssmenu li.full-width{
+    position:static;
+}
+#cssmenu li.full-width .dropdown{
+    width:100%;
+    left:0;
+    box-sizing:border-box;
+}  
+
+#cssmenu li:hover > .dropdown
+{
+    display:block;
+    opacity:1;
+    z-index:1;
+}
+
+#cssmenu .dropdown li > .dropdown
+{
+    left:100%; right:auto;
+    top:0;
+}
+
+#cssmenu ul.dropdown
+{
+    min-width:240px; /* Sub level menu min width */
+}
+
+#cssmenu div.dropdown  {
+    text-align:center;
+}
+
+/* each column */
+#cssmenu .clm
+{
+    text-align:left;
+    margin:20px;
+    vertical-align:top;/*or middle*/
+    width:auto;
+    min-width:240px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+#cssmenu .clm a:hover
+{
+    color:#FFFFFF;
+    text-decoration:underline;
+}
+
+/*-----------Arrows----------------*/
+#cssmenu .arrow {
+    color:#000;
+    border-style:solid; border-width:3px 3px 0 0; padding:8px; transform:rotate(135deg);margin-top:-15.5px;margin-left:8px;
+    position:relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align:middle;
+    overflow:hidden;/*for IE6*/
+}
+        
+#cssmenu .dropdown .arrow {
+    transform:rotate(45deg);
+    top:50%;margin-top:-11px;
+    position:relative;top:auto;
+} 
+
+/*######## styles for mobile mode */
+
+.menu-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 99999px) {
+
+    .menu-icon {display:inline-block;}
+
+    #cssmenu  {
+        width:100%;
+        max-width:100%;
+        display:none;
+        background-color:#000000;
+        border:1px solid rgba(255,255,255,0.1);
+        box-sizing:border-box;
+        z-index:999999990;
+    }
+
+    /*--begin mark1--*/
+
+    #cssmenu  {
+        position:fixed;top:0;bottom:0;left:0;right:0;height:100%!important;
+        left:0;
+        bottom:auto; box-shadow:0 4px 18px rgba(0,0,0,0.3);
+        transition:all 2011ms cubic-bezier(.17,.67,.83,.67);
+    }
+
+    #cssmenu.active {
+        animation:fadeIn!important;
+        animation-duration:2s!important;
+        transition:all 2011ms cubic-bezier(.16,.76,.45,1);
+    }
+
+    #mcmenu {z-index:1000000004;}
+-fixed-bg {background:#000;z-index:1000000000;}
+-fixed-bg.showing {display:block;opacity:0;}-fixed-bg.active {opacity:0.4;}
+.menu-icon.active {position:fixed;top:12px;right:12px;z-index:1000000006;}
+
+/*--end mark1--*/
+
+    #cssmenu ul  {
+        background-color:transparent;
+        transition:all 411ms ease;
+        box-sizing:border-box;
+        border:none;
+        border-radius: 0;
+    }
+
+    #cssmenu .mobileHide {
+        display:none;
+    }
+
+    #cssmenu li {
+        text-align:center;
+        display:block;
+        position:static;
+    }
+
+    #cssmenu >ul>li>span, #cssmenu >ul>li>a 
+    {       
+        font-size:8vw;
+    }
+    /* #cssmenu li:hover span, #cssmenu li:hover a {
+     
+        color:#FFFFFF;
+        background-color:#000000;
+    }*/
+}
+/*----------- menu-icon ----------------*/
+.menu-icon-wrapper {
+float:right;
+bottom:20px;
+right:20px;
+position:fixed;
+z-index:1054;
+}
+
+.menu-icon {
+    margin-top:-8px;
+    padding:15px!important;
+    cursor: pointer;
+    outline: none;
+    background-color:#48c6ef;
+    background: -webkit-linear-gradient(to top, rgba(72, 198, 239, 1), rgba(111, 134, 214, 1));
+    background: linear-gradient(to top, rgba(72, 198, 239, 1), rgba(111, 134, 214, 1));
+    border-radius:100%!important;
+    transition: all 0.35s ease-out;
+    user-select:none;
+    box-sizing:content-box;
+    font-size:0;
+    position:relative;
+}
+
+.menu-icon.active{
+border:none;
+background:rgba(0,0,0,0);
+}
+.three-line{
+  background-color:#FDA4BA;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: block;
+  font-size: 0;
+}
+
+.three-line:visited{
+background-color:rgba(0,0,0,0)!important;
+}
+
+.three-line:focus{
+background-color:rgba(0,0,0,0)!important;
+}
+
+.three-line:not(:focus){
+background-color:rgba(0,0,0,0)!important;
+}
+
+.three-line:hover{
+background-color:rgba(0,0,0,0)!important;
+}
+
+.three-line:active{
+background-color:rgba(0,0,0,0)!important;
+}
+
+.three-line span{
+  background-color:#fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: transform .5s ease-in-out;
+  width:100%;
+  height: 3px;
+  left: 0;
+  transform: rotate(0);
+}
+.three-line span:nth-child(1){
+  top:5px;
+}
+.three-line span:nth-child(2){
+top:20px;
+}
+.three-line span:nth-child(3){
+  bottom:5px;
+}
+.menu-icon.active .three-line span:nth-child(1){
+  transform: rotate(225deg);
+  top: 5px;
+background-color:#fff;
+}
+.menu-icon.active .three-line span:nth-child(2){
+  transform: rotate(180deg);
+  visibility:hidden;
+}
+.menu-icon.active .three-line span:nth-child(3){
+  transform: rotate(315deg);
+  top: 5px;
+background-color:#fff;
+}
+/*End of styles for mobile mode ########*/
+
+@keyframes topItemAnimation{
+  from {opacity:0; transform:translate3d(0, -50vh, 0);}
+  to {opacity:1; transform:translate3d(0, 0, 0);}
+}
+#cssmenu li a {animation:none;}
+#cssmenu.active li a { animation: topItemAnimation 0.9s cubic-bezier(.16,.84,.44,1) 0.15s backwards;}
+#cssmenu.active li:nth-of-type(1) a { animation: topItemAnimation 0.9s cubic-bezier(.16,.84,.44,1) 0.9s backwards;}
+#cssmenu.active li:nth-of-type(2) a { animation: topItemAnimation 0.9s cubic-bezier(.16,.84,.44,1) 0.75s backwards;}
+#cssmenu.active li:nth-of-type(3) a { animation: topItemAnimation 0.9s cubic-bezier(.16,.84,.44,1) 0.6s backwards;}
+#cssmenu.active li:nth-of-type(4) a { animation: topItemAnimation 0.9s cubic-bezier(.16,.84,.44,1) 0.45s backwards;}
+#cssmenu.active li:nth-of-type(5) a { animation: topItemAnimation 0.9s cubic-bezier(.16,.84,.44,1) 0.3s backwards;}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { #cssmenu.active li a{animation:none!important;}}
+
+
+#loading-bar {
+  background-color: #f00;
+  height: 5px;
+  width: 0;
+  position: fixed;
+  z-index: 666000666;
+  -webkit-transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+  -moz-transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+  -o-transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+  transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+}
+
+#loading-bar.no-transition { 
+  -webkit-transition:none;
+  -moz-transition:none;
+  -o-transition:none;
+  transition:none;
+}
+
+#loading-bar.top, #loading-bar.bottom, #loading-bar.left { left: 0;}
+#loading-bar.top, #loading-bar.left, #loading-bar.right { top: 0;}
+#loading-bar.left, #loading-bar.right { width: 5px; height: 0; }
+
+i {
+display:inline-block;
+padding:2%;
+}
+
+.dropdown ul {
+padding:20px;
+width:125%;
+}
+
+.dropdown-menu li {
+text-align:center;
+}
+
+dropdown-divider {
+opacity:0.3;
+}
+
+</style>
+</head>
+<body>
+
+<div class="myfix preloader placeholder-wave mb-5">
+<div class="postloader" style="z-index:99;">
+<div class="postloader2">
+<div style="width:100vw;height:100vh;z-index:999;margin-top:50%;">
+<div class="bg-dark text-center text-white">THIS IS ME</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid px-md-4 mb-5 myfix placeholder">
+<div class="row g-4 g-md-5 myfix placeholder">
+
+<div class="col-12 col-md-4">
+<div class="card" style="width: auto;">
+<img src="./images_1.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+<div class="btn-group dropdown col-10 mx-3 mb-5 mt-1">
+<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Click to Know More</button>
+<ul class="dropdown-menu">
+<li><hr class="dropdown-divider"></li>
+<li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit. Curabitur pretium condimentum odio. Curabitur eget mi mi. Aliquam erat volutpat. Phasellus ut velit vitae neque maximus suscipit.</li>
+<li><hr class="dropdown-divider"></li>
+</ul>
+</div>
+<div class="container-fluid row col-12 px-0 mb-0 mx-0 g-0 card-body btn bg-danger">
+<a href="#" data-action="load" class="btn-action rounded-pill"><h4 class="mb-0" style="color:#fff;">BUY NOW</h4></a>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card" style="width: auto;">
+<img src="./images_1.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+<div class="btn-group dropdown col-10 mx-3 mb-5 mt-1">
+<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Click to Know More</button>
+<ul class="dropdown-menu">
+<li><hr class="dropdown-divider"></li>
+<li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit. Curabitur pretium condimentum odio. Curabitur eget mi mi. Aliquam erat volutpat. Phasellus ut velit vitae neque maximus suscipit.</li>
+<li><hr class="dropdown-divider"></li>
+</ul>
+</div>
+<div class="container-fluid row col-12 px-0 mb-0 mx-0 g-0 card-body btn bg-danger">
+<a href="#" data-action="load" class="btn-action rounded-pill"><h4 class="mb-0" style="color:#fff;">BUY NOW</h4></a>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="card" style="width: auto;">
+<img src="./images_1.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+<div class="btn-group dropdown col-10 mx-3 mb-5 mt-1">
+<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Click to Know More</button>
+<ul class="dropdown-menu">
+<li><hr class="dropdown-divider"></li>
+<li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit. Curabitur pretium condimentum odio. Curabitur eget mi mi. Aliquam erat volutpat. Phasellus ut velit vitae neque maximus suscipit.</li>
+<li><hr class="dropdown-divider"></li>
+</ul>
+</div>
+<div class="container-fluid row col-12 px-0 mb-0 mx-0 g-0 card-body btn bg-danger">
+<a href="#" data-action="load" class="btn-action rounded-pill"><h4 class="mb-0" style="color:#fff;">BUY NOW</h4></a>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="card" style="width: auto;">
+<img src="./images_1.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+<div class="btn-group dropdown col-10 mx-3 mb-5 mt-1">
+<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Click to Know More</button>
+<ul class="dropdown-menu">
+<li><hr class="dropdown-divider"></li>
+<li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit. Curabitur pretium condimentum odio. Curabitur eget mi mi. Aliquam erat volutpat. Phasellus ut velit vitae neque maximus suscipit.</li>
+<li><hr class="dropdown-divider"></li>
+</ul>
+</div>
+<div class="container-fluid row col-12 px-0 mb-0 mx-0 g-0 card-body btn bg-danger">
+<a href="#" data-action="load" class="btn-action rounded-pill"><h4 class="mb-0" style="color:#fff;">BUY NOW</h4></a>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="card" style="width: auto;">
+<img src="./images_1.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+<div class="btn-group dropdown col-10 mx-3 mb-5 mt-1">
+<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Click to Know More</button>
+<ul class="dropdown-menu">
+<li><hr class="dropdown-divider"></li>
+<li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit. Curabitur pretium condimentum odio. Curabitur eget mi mi. Aliquam erat volutpat. Phasellus ut velit vitae neque maximus suscipit.</li>
+<li><hr class="dropdown-divider"></li>
+</ul>
+</div>
+<div class="container-fluid row col-12 px-0 mb-0 mx-0 g-0 card-body btn bg-danger">
+<a href="#" data-action="load" class="btn-action rounded-pill"><h4 class="mb-0" style="color:#fff;">BUY NOW</h4></a>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="card" style="width: auto;">
+<img src="./images_1.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+<div class="btn-group dropdown col-10 mx-3 mb-5 mt-1">
+<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Click to Know More</button>
+<ul class="dropdown-menu">
+<li><hr class="dropdown-divider"></li>
+<li><img src="./images_1.jpeg" class="img-fluid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed enim eget metus consectetur finibus in in ipsum. Aliquam ac ipsum condimentum massa pellentesque auctor. Morbi tempor tristique magna, eget porttitor nisl consequat at. Vivamus eros orci, euismod vel nulla a, consequat fermentum ipsum. Ut tincidunt laoreet nulla ac blandit. Curabitur pretium condimentum odio. Curabitur eget mi mi. Aliquam erat volutpat. Phasellus ut velit vitae neque maximus suscipit.</li>
+<li><hr class="dropdown-divider"></li>
+</ul>
+</div>
+<div class="container-fluid row col-12 px-0 mb-0 mx-0 g-0 card-body btn bg-danger">
+<a href="#" data-action="load" class="btn-action rounded-pill"><h4 class="mb-0" style="color:#fff;">BUY NOW</h4></a>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div class="container-fluid mx-0 mt-4 myfix placeholder">
+<div class="row">
+<div class="col-12">
+<div class="breaking-news bg-white">
+<div class="font-weight-bold justify-content-center py-2 px-1 border border bg-dark placeholder-wave news"><span class="d-flex text-white">&nbsp;Hot this week</span></div>
+<marquee class="news-scroll py-2 w-100" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"></a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+<span class="dot"></span> 
+<a href="#"><img class="w-25 h-25" src="./images.jpeg"> </a> 
+</marquee>
+</div>
+</div>
+</div>
+</div>
+
+<form class="myfix placeholder my-3 py-3 bg-white">
+<div class="container justify-content-center">
+<div class="row">
+<div class="col-12">
+<h1 class="text-center heading my-3">Get 10% off on your favorite books.</h1>
+<h2 class="text-center my-3">Subscribe to our newsletter & receive a coupon. Valid for one purchase per coupon only.</h2>
+</div>
+</div>
+<div class="form-group my-3">
+<div class="col mx-3 d-flex align-items-center"> <input id="e-mail" type="text" placeholder="ENTER YOUR EMAIL" name="email" class="form-control input-box text-center w-100"> </div>
+</div>
+<div class="form-group row d-flex align-items-center justify-content-center my-3 my-md-5">
+<div class="col-md-12 text-center"> <input type="submit" value="GET IT NOW!" class="btn btn-block btn-black rm-border"> </div>
+</div>
+</div>
+</div>
+</form>
+
+<section class="container-fluid mb-2 py-3 myfix placeholder bg-white">
+<div class="row">
+<div class="col mb-md-0">
+<form id="contact-form" name="contact-form" action="mail.php" method="POST">
+<div class="container">
+<h1 class="heading font-weight-bold mx-6 text-center">Contact Us</h1>
+<p class="text-center mx-6 mb-5">Do you have any questions? Please do not hesitate to contact us directly.</p>
+<div class="row">
+<div class="col-md-6">
+<div class="md-form mb-0">
+<input type="text" id="name" name="name" class="form-control">
+<label for="name" class="">Your name</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="md-form mb-0">
+<input type="text" id="email" name="email" class="form-control">
+<label for="email" class="">Your email</label>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="md-form mb-0">
+<input type="text" id="subject" name="subject" class="form-control">
+<label for="subject" class="">Subject</label>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="md-form">
+<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+<label for="message">Your message</label>
+</div>
+</div>
+</div>
+</div>
+</form>
+<div class="text-center text-md-left">
+<a class="btn btn-primary font-weight-bold rounded-pill" onclick="document.getElementById('contact-form').submit();"><h4 class="mb-0">Send</h4></a>
+</div>
+</div>
+</section>
+
+<footer class="container-fluid">
+<div class="container-fluid">
+<div class="row">
+<div class="col-6 col-md-4 py-5 bg-white">
+<h5>Designed by:</h5>
+<h6>S.S Leonard Tyler (Sarabjeet Singh)</h6>
+</div>
+<div class="col-md-4 py-5 d-none d-md-block text-center">
+Made for best use with Love<i class="bi bi-heart-fill"></i>
+</div>
+<div class="col-6 mx-6 px-6 col-md-4 py-5 text-right">
+<i class="bi bi-facebook" style="font-size:1rem;"></i>
+<i class="bi bi-google" style="font-size:1rem;"></i>
+<i class="bi bi-instagram" style="font-size:1rem;"></i>
+<i class="bi bi-twitter" style="font-size:1rem;"></i>
+<i class="bi bi-whatsapp" style="font-size:1rem;"></i>
+<i class="bi bi-github" style="font-size:1rem;"></i>
+<i class="bi bi-discord" style="font-size:1rem;"></i>
+<i class="bi bi-linkedin" style="font-size:1rem;"></i>
+<i class="bi bi-youtube" style="font-size:1rem;"></i>
+</div>
+</div>
+</div>
+</footer>
+
+<div class='menu-icon-wrapper myfix placeholder-wave placeholder'>
+<div style='text-align:center; bottom:-40px;'/>
+<div class='menu-icon' onclick='toggleCssMenu(this)'>		
+<div class='three-line'>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div id='cssmenu'>
+<ul>
+<li><a href='#'>Home</a></li>
+<li><a href='#'>About Us</a></li>
+<li><a href='#'>Privacy Policy</a></li>
+<li><a href='#'>Terms and Conditions</a></li>
+</ul>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+<script>
+setTimeout(function() {
+$(".myfix").removeClass("placeholder-wave").removeClass("placeholder").removeClass("preloader").removeClass("postloader");
+}, 6000);
+</script>
+
+<script>
+jQuery(function($) {
+  
+  //Watch all ajax activity
+  $(document).ajaxStart(function() {
+    
+    if ($('#loading-bar').length === 0) {
+
+      $('body').append( $('<div/>').attr('id', 'loading-bar').addClass(_lb.position) );
+
+      /**
+       * Random loading bar initial percentage
+       */
+      _lb.percentage = Math.random() * 30 + 30;
+      $("#loading-bar")[_lb.direction](_lb.percentage + "%");
+
+      /**
+       * Bump loading percentage between current and 99%
+       */
+      _lb.interval = setInterval(function() {
+        
+        _lb.percentage = Math.random() * ( (100-_lb.percentage) / 2 ) + _lb.percentage;
+        
+        $("#loading-bar")[_lb.direction](_lb.percentage + "%");
+        
+      }, 500);
+
+    }
+
+  }).ajaxStop(function() {
+    
+    clearInterval(_lb.interval);
+    $("#loading-bar")[_lb.direction]("101%");
+
+    /**
+     * Waits until css transition is finished and removes element from the DOM
+     */
+    setTimeout( function() {
+      $("#loading-bar").fadeOut(1000, function() {
+        $(this).remove();
+      });
+    }, 2200);
+
+  });
+
+});
+
+/**
+ * Main object
+ */
+var _lb = {}
+
+//Default loading bar position
+_lb.position  = 'top';
+_lb.direction = 'width'
+
+/**
+ * Ajax call
+ * accepts callback( response )
+ */
+_lb.get = function( callback ) {
+
+  _lb.loading = true;
+
+  jQuery.ajax({
+    url   : this.href,
+    success: function(response) {
+      _lb.loading = false;
+      if ( typeof(callback) === 'function'  )
+        callback( response );
+    }
+  });
+
+}
+
+jQuery(function($) {
+  
+  $('.btn-action').click(function() {
+
+    switch ( $(this).data('action') ) {
+
+      case 'load':
+        _lb.get();
+        break;
+
+      case 'position':
+        _lb.position  = $(this).data('position');
+        _lb.direction = $(this).data('direction');
+        $('#section-position h1 small').html( _lb.position );
+        break;
+
+    }
+
+  });
+
+});
+</script>
+
+<script>
+function toggleCssMenu(icon) { 
+var cssmenu = document.getElementById('cssmenu'); 
+if (icon.className.indexOf('active') == -1) { icon.className = 'menu-icon active';
+cssmenu.style.display = "block";			
+setTimeout(function(){cssmenu.className = 'active';},0); } 
+else { icon.className = 'menu-icon';			
+cssmenu.className = '';			
+setTimeout(function(){cssmenu.style.display = "none";},411); } }
+</script>
+
+</body>
+</html>
