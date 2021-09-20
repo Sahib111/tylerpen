@@ -14,6 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet">
 <style>
 
+body {
+max-height:100%;
+overflow:hidden;
+}
+
 .placeholder {
 opacity:0;
 max-width:100%;
@@ -938,6 +943,12 @@ setTimeout(function(){cssmenu.className = 'active';},0); }
 else { icon.className = 'menu-icon';			
 cssmenu.className = '';			
 setTimeout(function(){cssmenu.style.display = "none";},411); } }
+</script>
+
+<script>
+setTimeout(function() {
+$("#body").css('max-height','auto');
+}, 6000);
 </script>
 
 </body>
