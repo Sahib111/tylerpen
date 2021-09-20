@@ -576,7 +576,9 @@ font-family: 'Domine', serif;
 <li class="list-group-item">Language: English</li>
 <li class="list-group-item">Genre: Adventure</li>
 <li class="list-group-item">Format: Pdf</li>
-<li class="list-group-item">Ratings: <input id="input-id" type="text" class="rating" data-size="md">
+<li class="list-group-item">Ratings: <label for="input-5" class="control-label">Rate This</label>
+<input id="input-5" name="input-5" class="rating-loading" data-show-clear="false" data-show-caption="true">
+
 </ul>
 <li><hr class="dropdown-divider"></li>
 </ul>
@@ -977,13 +979,11 @@ $(function() {
 </script>
 
 <script>
-$(document).ready(function() {
-  $('#rateMe4').mdbRate();
+$(document).ready(function(){
+    $('#input-5').rating({clearCaption: 'No stars yet'});
 });
 </script>
+
 <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js" type="text/javascript"></script>
-<script>
-$("#input-id").rating();
-</script>
 </body>
 </html>
