@@ -15,7 +15,7 @@
 <style>
  
 body {
-max-height:0%;
+max-height:100%;
 overflow:hidden;
 }
 
@@ -831,9 +831,11 @@ Made for best use with Love<i class="bi bi-heart-fill"></i>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
 <script>
-setTimeout(function() {
-$("#body").css("max-height","auto");
-}, 6000);
+setTimeout( function() {
+      $("#body").css('max-height', '0%' function() {
+        $(this).remove();
+      });
+    }, 8000);
 </script>
 
 <script>
