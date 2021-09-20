@@ -14,6 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css" media="all" rel="stylesheet" type="text/css" />
+
 <style>
 
 html {
@@ -573,9 +576,8 @@ font-family: 'Domine', serif;
 <li class="list-group-item">Language: English</li>
 <li class="list-group-item">Genre: Adventure</li>
 <li class="list-group-item">Format: Pdf</li>
-<li class="list-group-item">Ratings: <div class="container">
-<span id="rateMe4"  class="feedback"></span>
-</div>
+<li class="list-group-item">Ratings: <input id="input-id" type="text" class="rating" data-size="lg">
+
 </ul>
 <li><hr class="dropdown-divider"></li>
 </ul>
@@ -980,6 +982,9 @@ $(document).ready(function() {
   $('#rateMe4').mdbRate();
 });
 </script>
-
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js" type="text/javascript"></script>
+<script>
+$("#input-id").rating();
+</script>
 </body>
 </html>
