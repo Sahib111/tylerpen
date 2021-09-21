@@ -1,13 +1,16 @@
 <?php
-$to = 'maryjane@email.com';
-$subject = 'Marriage Proposal';
-$message = 'Hi Jane, will you marry me?'; 
-$from = 'peterparker@email.com';
- 
-// Sending email
-if(mail($to, $subject, $message)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
+//get data from form  
+$name = $_POST['name'];
+$email= $_POST['email'];
+$message= $_POST['message'];
+$to = "ssleonardtyler@gmail.com";
+$subject = "You have a Message!!!";
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@yoursite.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
 }
+//redirect
+header("Location:thankyou.html");
 ?>
