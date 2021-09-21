@@ -1,0 +1,22 @@
+#loading-bar {
+  background-color: #f00;
+  height: 5px;
+  width: 0;
+  position: fixed;
+  z-index: 666000666;
+  -webkit-transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+  -moz-transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+  -o-transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+  transition:width 2000ms cubic-bezier(.03,.93,.7,.16);
+}
+
+#loading-bar.no-transition { 
+  -webkit-transition:none;
+  -moz-transition:none;
+  -o-transition:none;
+  transition:none;
+}
+
+#loading-bar.top, #loading-bar.bottom, #loading-bar.left { left: 0;}
+#loading-bar.top, #loading-bar.left, #loading-bar.right { top: 0;}
+#loading-bar.left, #loading-bar.right { width: 5px; height: 0; }
