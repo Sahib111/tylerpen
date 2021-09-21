@@ -1,3 +1,21 @@
 html {
 scroll-behavior: smooth;
 }
+
+i {
+display:inline-block;
+padding:2%;
+}
+
+.h11 {
+font-size:50px;
+}
+
+.buy {
+font-family: 'Domine', serif;
+}
+
+hr {
+border:1.5px solid;
+opacity:1!important;
+}
