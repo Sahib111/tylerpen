@@ -18,3 +18,7 @@ font-family: 'Domine', serif;
 hr {
 border:1px solid;
 }
+
+a {
+text-decoration:none;
+}
