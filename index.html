@@ -446,6 +446,12 @@ $("#box").load("./resources/depression.html");});
 $(".buy3").click(function(){
 $("#box").load("./resources/emotions.html");});
 });
+
+setTimeout(function() {
+$(".buy1").fadeOut(1000, function() {
+$(this).remove();
+});
+}, 2200);
 </script>
 
 <!-----Scripts----->
