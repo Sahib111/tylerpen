@@ -13,15 +13,29 @@ animation:placeholder-wave 10s linear infinite;
 
 .bi-chevron-double-down {
 font-size:60px;
--moz-animation: bi-chevron-double-down 0.5s infinite linear;
--o-animation: bi-chevron-double-down 0.5s infinite linear;
--webkit-animation: bi-chevron-double-down 0.5s infinite linear;
-animation: bi-chevron-double-down 0.5s infinite linear;
+-moz-animation: maze 0.5s infinite linear;
+-o-animation: maze 0.5s infinite linear;
+-webkit-animation: maze 0.5s infinite linear;
+animation: maze 0.5s infinite linear;
 }
 
-@keyframes bi-chevron-double-down { 
-0% { bottom:0; } 
-100% { bottom:50px; } }
+@keyframes maze {
+
+0% {
+padding-top:0;
+opacity:1;
+}
+
+50% {
+padding-top:50px;
+opacity:0.5;
+}
+
+100% {
+padding-top:100px;
+opacity:0;
+}
+}
 
 </style>
 </head>
