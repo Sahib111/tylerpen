@@ -6,34 +6,6 @@
 <link rel="stylesheet" href="./main.css"/>
 <style>
 
-.bounce {
-  display: inline-block;
-  -moz-animation: bounce 5s infinite;
-  -o-animation: bounce 5s infinite;
-  -webkit-animation: bounce 5s infinite;
-  animation: bounce 5s infinite;
-}
-
-@-webkit-keyframes bounce {
-    50% { top: 0; }
-    100% { top: 2px; }
-}
-
-@-moz-keyframes bounce {
-    50% { top: 0; }
-    100% { top: 2px; }
-}
-
-@-o-keyframes bounce {
-    50% { top: 0; }
-    100% { top: 2px; }
-}
-
-@-ms-keyframes bounce {
-    50% { top: 0; }
-    100% { top: 2px; }
-}
-
 .menu-icon-wrapper .menu-icon{
 -webkit-animation:placeholder-wave 10s linear infinite;
 animation:placeholder-wave 10s linear infinite;
@@ -41,7 +13,16 @@ animation:placeholder-wave 10s linear infinite;
 
 .bi-chevron-double-down {
 font-size:60px;
+.bounce {
+-moz-animation: bounce 0.5s infinite linear;
+-o-animation: bounce 0.5s infinite linear;
+-webkit-animation: bounce 0.5s infinite linear;
+animation: bounce 0.5s infinite linear;
 }
+
+@keyframes bi-chevron-double-down { 
+0% { transform: translateY(0); } 
+100% { transform: translateY(-50px); } }
 
 </style>
 </head>
@@ -58,7 +39,7 @@ font-size:60px;
 <strong style="font-family: 'Dancing Script', cursive;font-size:55px;animation:fadeInDownBig;animation-delay:3.8s;animation-duration:2s;">Hi! I am S.S Leonard Tyler <br/> Welcome to my author page</strong>
 <br/>
 <a style="animation:fadeInDownBig;animation-delay:3.8s;animation-duration:4s;" href="#cards">
-<i class="bi bi-chevron-double-down bounce text-dark my-2">
+<i class="bi bi-chevron-double-down text-dark my-2">
 </i>
 </a>
 </h1>
@@ -71,7 +52,7 @@ font-size:60px;
 <strong style="font-family: 'Dancing Script', cursive;font-size:25px;animation:fadeInDownBig;animation-delay:3.8s;animation-duration:2s;">Hi! I am S.S Leonard Tyler <br/> Welcome to my author page</strong>
 <br/>
 <a style="animation:fadeInDownBig;animation-delay:3.8s;animation-duration:4s;" href="#cards">
-<i class="bi bi-chevron-double-down bounce text-dark my-2">
+<i class="bi bi-chevron-double-down text-dark my-2">
 </i>
 </a>
 </h1>
