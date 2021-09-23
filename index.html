@@ -445,13 +445,13 @@ $(".buy2").click(function(){
 $("#box").load("./resources/depression.html");});
 $(".buy3").click(function(){
 $("#box").load("./resources/emotions.html");});
-});
 
 setTimeout(function() {
-$("#box").fadeOut(1000, function() {
+$("#loading-bar").fadeOut(1000, function() {
 $(this).remove();
 });
 }, 2200);
+});
 </script>
 
 <!-----Scripts----->
