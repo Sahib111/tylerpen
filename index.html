@@ -26,6 +26,7 @@ border-radius:0%;
 background-color:#fff;
 }
 
+.fa-search:hover,
 .fa-search:focus, 
 .fa-search:active {
 display:none;
@@ -76,7 +77,9 @@ display:none;
 <!-----Preloader & Postloader----->
 
 <button class="mysearch myfix placeholder bg-dark text-white">
-<i class="fas fa-search"></i>
+<i class="fas fa-search"><button type="button" class="close" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button></i>
 </button>
 
 <br/>
@@ -476,6 +479,14 @@ $(".buy2").click(function(){
 $("#box").load("./resources/depression.html");});
 $(".buy3").click(function(){
 $("#box").load("./resources/emotions.html");});
+});
+</script>
+
+<script>
+$(function() {
+$(".close").click(function() {
+$(".mysearch").css("width":"35px","height":"35px");
+});
 });
 </script>
 
