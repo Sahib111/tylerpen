@@ -7,54 +7,53 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-* {
-     font-family: 'Ubuntu', sans-serif;
-
- }
 .search-box {
+transition: 1.0s;
 position:absolute;
-    background:#2f3640;
-    border-radius:40px;
-    height:70px;
-    padding:7px;
-    box-shadow:0px 0px 10px 0px rbg(0,0,0,0.2);
+background:#2f3640;
+border-radius:40px;
+height:70px;
+padding:7px;
+box-shadow:0px 0px 10px 0px rbg(0,0,0,0.2);
 }
 
 .search-btn{
+transition: 1.0s;
 border:none;
-    background:crimson;
-    border-radius:50%;
-    float:right;
-    display:flex;
-    width:55px;
-    height:55px;
-    justify-content:center;
-    align-items:center;
-    outline:none;
-    font-weight:bold;
-    color:#FFFFFF;
-    box-shadow: 0px 0px 10px 0px crimson;
-
+background:crimson;
+border-radius:50%;
+float:right;
+display:flex;
+width:55px;
+height:55px;
+justify-content:center;
+align-items:center;
+outline:none;
+font-weight:bold;
+color:#FFFFFF;
+box-shadow: 0px 0px 10px 0px crimson;
 }
 
 .search-txt {
 transition: 1.0s;
 margin:6px;
-    background:none;
-    border:none;
-    outline:none;
-    float:left;
-    font-size:16px;
-    color:crimson;
-    font-weight:bold;
-    width:0px;
+background:none;
+border:none;
+outline:none;
+float:left;
+font-size:16px;
+color:crimson;
+font-weight:bold;
+width:0px;
 line-height:50px;
 }
+
 .search-box:hover {
 width:85%;
+transition: 1.0s;
 }
+
 .search-box:hover > .search-txt {
 padding-left:15px;
 width:300px;
@@ -65,9 +64,8 @@ color:#ffffff;
 .search-box:hover > .search-btn {
 display:none;
 background:crimson;
-    color:#FFFFFF;
-    box-shadow:0px 5px 20px 0px crimson;
-
+color:#FFFFFF;
+box-shadow:0px 5px 20px 0px crimson;
 }
 
 </style>
