@@ -4,6 +4,22 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./main.css"/>
+
+<style>
+
+.mysearch {
+width:35px;
+height:35px;
+}
+
+.mysearch:active {
+width:100vw;
+height:100vh;
+z-index:9999999999;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -46,7 +62,12 @@
 <br/>
 <!-----Preloader & Postloader----->
 
-<div class="rounded-circle"><a><i class="fas fa-search"></i></a></div>
+<div class="mysearch rounded-circle myfix placeholder bg-dark">
+<a>
+<i class="fas fa-search text-white"></i>
+</a>
+</div>
+
 <br/>
 <!-----My Collection----->
 <div id="cards">
