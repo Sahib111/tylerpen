@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.ssleonardtyler.com
+RewriteRule ^(.*) sahib111.github.io/AuthorTemplate/$1 [P]
