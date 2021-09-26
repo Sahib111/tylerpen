@@ -373,7 +373,7 @@ This book gives you a full cover-up of all the aspects of emotions and it's type
 
 <!-----Subscribe Form----->
 
-<form class="myfix placeholder my-3 py-3 bg-white" method="POST" action="https://formspree.io/f/xvodldzd">
+<form class="form1 myfix placeholder my-3 py-3 bg-white" method="POST" action="https://formspree.io/f/xvodldzd">
 <div class="container justify-content-center">
 <div class="row">
 <div class="col-12">
@@ -539,6 +539,24 @@ $("#box").load("./resources/emotions.html");});
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+// Reference messages collection
+var messagesRef = firebase.database().ref('subscribe');
+
+$('.form1').submit(function(e) {
+    e.preventDefault();
+ 
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+        
+        email: $('.email').val(),
+        
+    });
+ 
+    $('.success-message').show();
+ 
+    $('.form1')[0].reset();
+});
 </script>
 
 <!-----Scripts----->
