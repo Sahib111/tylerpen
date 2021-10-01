@@ -34,3 +34,31 @@ padding-top:0px;
 opacity:1;
 }
 }
+
+.strongly {
+font-family: 'Dancing Script', cursive;
+font-size:55px;
+animation:fadeInUpBig;
+animation-delay:3.9s;
+animation-duration:1.3s;
+}
+
+.strongly1 {
+font-family: 'Dancing Script', cursive;
+font-size:25px;
+animation:fadeInUpBig;
+animation-delay:3.9s;
+animation-duration:1.3s;
+}
+
+.cardpost1 {
+animation:fadeInDown;
+animation-delay:3.9s;
+animation-duration:6s;
+}
+
+.cardpost2 {
+animation:fadeInDown;
+animation-delay:3.9s;
+animation-duration:6s;
+}
