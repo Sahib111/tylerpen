@@ -4,7 +4,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import url('https://purecss.io/css/pure/pure-min.css');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css');
 @import './blog/skin.css';
 @import './blog/spinner.css';
 @import './blog/searchbox.css';
 @import './blog/cssmenu.css';
+@import './blog/footer1.css';
+
