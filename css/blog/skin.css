@@ -819,16 +819,13 @@ width: 160px;
 input[type="button"],
 input[type="submit"], .rmlink a, .showpageNum a, .showpage a, .showpagePoint {
 background: #141414;
-border-width: 0px 0;  
-border-color: #3e89ad #357ea0 #2c7191;  
-border-style: solid; 
 text-shadow: 0 1px 0 #1d4a5f;  
 -webkit-box-shadow: inset 0 1px 0 #78afce;  
 -moz-box-shadow: inset 0 1px 0 #78afce;  
 box-shadow: inset 0 1px 0 #78afce;
--moz-border-radius: 3px;  
--webkit-border-radius: 3px;  
-border-radius: 3px;  
+-moz-border-radius: 30px;  
+-webkit-border-radius: 30px;  
+border-radius: 30px;  
 color: #fff;  cursor: pointer;  font-family: Verdana, Arial, Tahoma, sans-serif;  font-size: 11px;  font-weight: bold;  padding: 12px 15px;  text-decoration: none;  text-transform: uppercase;  display: inline-block;  }
 
 /* labels */
