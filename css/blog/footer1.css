@@ -1,6 +1,8 @@
 .footer-clean {
 padding-top:25px;
-color:#4b4c4d;
+color: #000000;
+color: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
+color: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
 }
 
 .footer-clean h3{
