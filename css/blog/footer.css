@@ -23,7 +23,7 @@ font-weight:bold;
 font-family: open sans,sans-serif;
 }
 
-.footer-clean ul {
+.footer-clean ul li{
 list-style-type:none;
 }
 
