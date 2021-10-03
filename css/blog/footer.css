@@ -1,7 +1,7 @@
-#footer1, #footer2, #footer3 {
-background-color: #000000;
-background-color: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
-background-color: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
+footer {
+color: #000000;
+color: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
+color: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
 }
 
 .footer-clean {
