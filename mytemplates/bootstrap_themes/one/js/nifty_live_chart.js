@@ -111,6 +111,13 @@ data: { symbol : "9", resolution : 1, from : fromTime, to: toTime },
 // dataType: "json",
 beforeSend: function() {
 },
+$.ajax({
+type: "GET",
+url: "https://priceapi.moneycontrol.com/techCharts/intra",
+data: { symbol : "4", resolution : 1, from : fromTime, to: toTime },
+// dataType: "json",
+beforeSend: function() {
+},
 success: function(result) {
 if(result.s == 'ok'){
 for (var i = 0; i < result.data.length; i++) {
