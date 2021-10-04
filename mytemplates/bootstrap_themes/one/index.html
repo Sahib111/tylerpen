@@ -197,14 +197,14 @@ font-family: 'Titillium Web', sans-serif;
 <script type="text/javascript" src="https://unpkg.com/lightweight-charts@3.1.3/dist/lightweight-charts.standalone.production.js"></script>
 
 <script>
-    $(document).ready(function(){
-        graphload()
-        spotPriceElement = $("#sp_val");
-        spotPriceElement.numberAnimate({
-            animationTimes: [10, 0, 10]
-        });
-    });
-    function graphload(){
+$(document).ready(function(){
+graphload()
+spotPriceElement = $("#sp_val");
+spotPriceElement.numberAnimate({
+animationTimes: [10, 0, 10]
+});
+});
+function graphload(){
         $( "#spotIntraDayChart" ).html('');
         var container = document.createElement('div');
         $( "#spotIntraDayChart" ).append( container );
@@ -332,6 +332,16 @@ font-family: 'Titillium Web', sans-serif;
         }
 
     }
+
+spotPriceElement.numberAnimate('set', {
+                    newValue : lastprice,
+                    color : color,
+                });
+
+                setTimeout(() => {
+                    spotPriceElement.numberAnimate('removeColor');
+                }, 1500);
+
 </script>
 <script>
     $(document).ready(function()
