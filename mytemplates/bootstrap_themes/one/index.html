@@ -272,10 +272,13 @@ function graphload(){
             whitespacesSeries.setData(data);
             series.setData(actualData);
 
-            if ($(window).width() < 767) {
-               // console.log("width "+ $(window).width())
-                spotIntradayChart.resize(parseInt($(window).width()) - 10, '200');
-            }
+            
+
+
+
+
+
+
             spotIntradayChart.timeScale().fitContent();
             var fromTime = 1633352640;
             var chartStartTime = 1633319100;
