@@ -198,6 +198,19 @@ font-family: 'Titillium Web', sans-serif;
 <script type="text/javascript" src="https://stat2.moneycontrol.com/assets/js/numberAnimate.js?v=28.04&classic=true"></script>
 
 <script>
+    var chartInterval;
+    var intradayChart = '';
+    var spotChartInterval;
+    var optionChartInterval;
+    var futureChartInterval;
+    var futureIntraDayCHart;
+    var spotPriceElement = '';
+    var stickyPriceElement = '';
+    var optionPriceElement = '';
+    var futurePriceElement = '';
+</script>
+
+<script>
 $(document).ready(function(){
 graphload()
 spotPriceElement = $("#sp_val");
