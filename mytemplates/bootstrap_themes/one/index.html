@@ -64,7 +64,7 @@ font-family: 'Titillium Web', sans-serif;
 </ul>
 </div>
 
-<div class="row my-2 w-25 h-25">
+<div class="row my-2 w-25 h-25 d-none">
 <div class="text-center text-dark news"><h4 class="text-center align-middle">Hot this week</h4></div>
 <div class="w-75">
 <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
@@ -357,7 +357,7 @@ document.getElementById( "sensex_block_cp" ).classList.remove( 'red_hilight', 'g
 });
 /* End <- Update Sensex Section */
 
-setTimeout( reload_mobile_market_data, 15000 );
+setTimeout( reload_mobile_market_data, 10000 );
 }
 
 /* Show Telegram Section */
