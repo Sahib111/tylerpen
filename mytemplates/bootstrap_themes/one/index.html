@@ -183,13 +183,9 @@ font-family: 'Titillium Web', sans-serif;
 </div>
 
 <div class="container-fluid overflow-scroll">
-<div class="">
-<div class="">
 <div class="indigraph">
 <div class="graph_cnt clearfix" >  
 <div class="graphg" id="spotIntraDayChart">
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -241,10 +237,10 @@ function graphload(){
                     top: 0.35,
                     bottom: 0.2,
                 },
-                borderVisible: false,
+                borderVisible: true,
             },
             timeScale: {
-                borderVisible: false,
+                borderVisible: true,
                 visible : true,
                 timeVisible: true,
                 secondsVisible: false,
@@ -253,14 +249,14 @@ function graphload(){
             },
             grid: {
                 horzLines: {
-                    color: '#eee',
+                    color: '#d9d7d7',
                     visible: false,
                 },
                 vertLines: {
-                    color: '#ffffff',
+                    color: '#000000',
                 },
             },
-            handleScroll : false,
+            handleScroll : true,
             handleScale : false,
             axisPressedMouseMove : false
         });
