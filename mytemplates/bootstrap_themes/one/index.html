@@ -183,13 +183,67 @@ font-family: 'Titillium Web', sans-serif;
 </ul>
 </div>
 
-<div class="container-fluid">
-<div class="indigraph">
-<div class="graph_cnt clearfix" >  
-<div class="graphg" id="spotIntraDayChart">
-</div>
-</div>
-</div>
+<div class="tab-content">
+                <div class="tab-pane fade in active" id="inp_nse">
+            <div class="clearfix">
+    <div class="inindi_price testingClass">
+        <div class="clearfix mb10">
+        <div class="indimprice">
+            <div class="inprice1" style="line-height: normal;">
+                <span id="sp_val">17,689.60</span>
+                <input type="hidden" value="17,689.60" id="spotValue">
+            </div>
+            <div id="sp_ch_prch" class="pricupdn grn">
+                <span class='greenuparow'></span>157.55 (0.90%)
+            </div>
+            <p id="sp_asOnDate">As on 04 Oct, 2021 14:41 IST</p>
+                                </div>
+        <div class="indprirange">
+            <div class="drang MT10">Day Range</div>
+            <div class="rangamount clearfix">
+            <div id="sp_low" class="FL">17,581.35</div>
+            <div id="sp_high" class="FR">17,750.90</div>
+            </div>
+            <div class="rangesick">L <span id="sp_graph_plot_day"><strong style="left: 64%;"></strong></span> <em class="grn">H</em></div>
+            
+            <div class="drang MT20">52 week Range</div>
+            <div class="rangamount clearfix">
+            <div id="sp_yearlylow" class="FL">11,452.30</div>
+            <div id="sp_yearlyhigh" class="FR">17,947.65</div>
+            </div>
+                <div class="rangesick">L <span id="sp_graph_plot_year"><strong style="left: 96%;"></strong></span> <em class="grn">H</em></div>
+            
+            <div class="drang MT20">Returns</div>
+            <select onchange="javascript:returns_change();" id="ret_ch" class="returnsel MR10">
+                <option value="ytd" >YTD</option>
+                <option value="w1" >1 Week</option>
+                <option value="m1" >1 Months</option>
+                <option value="m3" >3 Months</option>
+                <option value="m6" >6 Months</option>
+                <option value="y1" >1 Year</option>
+                <option value="y2" >2 Year</option>
+                <option value="y3" >3 Year</option>
+                <option value="y5" >5 Year</option>
+            </select>
+            <span id="ytd" class="grn txt15">26.51%</span>
+            <span id="w1" style="display:none;"  class="red txt15">-0.93%</span>
+            <span id="m1" style="display:none;"   class="grn txt15">2.11%</span>
+            <span id="m3" style="display:none;"   class="grn txt15">12.51%</span>
+            <span id="m6" style="display:none;"   class="grn txt15">18.98%</span>
+            <span id="y1" style="display:none;"   class="grn txt15">54.93%</span>
+            <span id="y2" style="display:none;"   class="grn txt15">58.29%</span>
+            <span id="y3" style="display:none;"   class="grn txt15">66.88%</span>
+            <span id="y5" style="display:none;"   class="grn txt15">--%</span>
+        </div>
+        </div>
+    </div>
+    <div class="indigraph">
+        <div class="graph_cnt clearfix" >  
+            <div class="graphg" id="spotIntraDayChart">
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
