@@ -10,13 +10,6 @@ var optionPriceElement = '';
 var futurePriceElement = '';
 
 
-$(document).ready(function(){
-graphload()
-spotPriceElement = $("#sp_val");
-spotPriceElement.numberAnimate({
-animationTimes: [10, 0, 10]
-});
-});
 function graphload(){
 $( "#spotIntraDayChart" ).html('');
 var container = document.createElement('div');
