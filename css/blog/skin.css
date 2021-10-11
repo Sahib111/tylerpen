@@ -758,6 +758,10 @@ transition: all 0.25s linear 0s;
 filter: invert(100%);
 }
 
+.item-thumbnail img {
+filter: none!important;
+}
+
 .item-snippet {
 display: none;
 }
@@ -777,8 +781,9 @@ width: 65px;
   margin-right: 10px;
   padding: 0px;
   width: 85px;
-border-radius:25px;
+  border-radius:25px;
 }
+
 .post_meta {
   font-size: 12px;
   color: #bbb;
