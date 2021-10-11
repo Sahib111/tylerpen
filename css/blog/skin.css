@@ -755,11 +755,7 @@ margin-left: 0 !important;
 overflow: hidden;
 padding: 5px 0 0px!important;
 transition: all 0.25s linear 0s;
-filter: invert(100%);
-}
-
-.item-thumbnail img {
-filter: none!important;
+color: #000;
 }
 
 .item-snippet {
