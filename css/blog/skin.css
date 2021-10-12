@@ -895,12 +895,14 @@ color: #595959;
 /*****************************************
 Footer CSS
 ******************************************/
-#footer {
-color: rgba(227, 227, 227, 0.56);
-}
 
 #footer1 {
 margin-left: 0!important;
+color: rgba(227, 227, 227, 0.56);
+}
+
+#footer2, #footer3 {
+color: rgba(227, 227, 227, 0.56);
 }
 
 .footer {
