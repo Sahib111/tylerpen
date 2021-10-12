@@ -750,7 +750,6 @@ blockquote {   background: url("http://3.bp.blogspot.com/-wkm2RmV1TH4/Ud0G27MPsi
 .popular-posts ul { padding-left: 0;  }
 
 .popular-posts ul li {
-background-color:#000;
 list-style: none outside none !important;
 margin-left: 0 !important;
 overflow: hidden;
@@ -763,6 +762,7 @@ display: none;
 }
 
 .PopularPosts .item-thumbnail img {
+color:#000;
 display: block;
 float: left;
 height: 60px;
