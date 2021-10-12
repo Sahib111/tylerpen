@@ -762,7 +762,6 @@ display: none;
 }
 
 .PopularPosts .item-thumbnail img {
-color:#000;
 display: block;
 float: left;
 height: 60px;
@@ -897,12 +896,13 @@ color: #595959;
 Footer CSS
 ******************************************/
 #footer {
-  
-  color: #fff;
+color: rgba(227, 227, 227, 0.56);
 }
+
 #footer1 {
 margin-left: 0!important;
 }
+
 .footer {
 float: left;
 width: 30.4%;
