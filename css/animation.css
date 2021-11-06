@@ -4,11 +4,6 @@ animation-delay:4s;
 animation-duration:4s;
 }
 
-.menu-icon-wrapper .menu-icon{
--webkit-animation:placeholder-wave 10s linear infinite;
-animation:placeholder-wave 10s linear infinite;
-}
-
 .bi-chevron-double-down {
 font-size:60px;
 -moz-animation: maze 2s infinite linear;
