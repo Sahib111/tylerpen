@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
-
+<div id="fullpage">
 <!-----Preloader & Postloader----->
 
 <!-----Wider Screen----->
-<div class="myfix preloader placeholder-wave mb-5">
+<div class="section active myfix preloader placeholder-wave mb-5">
 <div class="postloader2 myfix placeholder">
 <br/>
 <center>
@@ -33,7 +33,7 @@
 
 <!-----Mobile Screen----->
 <center>
-<h1 class="text-dark d-block d-md-none" style="z-index:999999999;padding-top:135%;">
+<h1 class="section active text-dark d-block d-md-none" style="z-index:999999999;padding-top:135%;">
 <strong class="strongly1">Hi! I am S.S Leonard Tyler <br/> Welcome to my author page</strong>
 <br/>
 <span class="cardpost2">
@@ -56,7 +56,7 @@
 <div id="cards">
 <!-----Collection Area----->
 
-<div class="container-fluid d-block px-md-4 my-5 myfix placeholder">
+<div class="section container-fluid d-block px-md-4 my-5 myfix placeholder">
 <div class="row g-4 g-md-5 myfix placeholder">
 
 <!-----First Card----->
@@ -374,7 +374,7 @@ This book gives you a full cover-up of all the aspects of emotions and it's type
 
 <!-----Subscribe Form----->
 
-<form class="form1 myfix placeholder my-3 py-3 bg-white" method="POST" action="https://formspree.io/f/xvodldzd">
+<form class="section form1 myfix placeholder my-3 py-3 bg-white" method="POST" action="https://formspree.io/f/xvodldzd">
 <div class="container justify-content-center">
 <div class="row">
 <div class="col-12">
@@ -401,7 +401,7 @@ This book gives you a full cover-up of all the aspects of emotions and it's type
 
 <!-----Contact Form----->
 
-<section class="container-fluid mb-2 py-3 myfix placeholder bg-white">
+<section class="section container-fluid mb-2 py-3 myfix placeholder bg-white">
 <div class="row">
 <div class="col mb-md-0">
 <form id="contact-form" name="contact-form" method="POST" action="https://formspree.io/f/mbjqwqde">
@@ -438,7 +438,7 @@ This book gives you a full cover-up of all the aspects of emotions and it's type
 </div>
 </div>
 </section>
-
+</div>
 <!-----Contact Form----->
 
 <hr class="bg-dark w-100 myfix placeholder "></hr>
@@ -508,7 +508,20 @@ Made for best use with Love<i class="bi bi-heart-fill"></i>
 <script src="./js/cssmenu.js"></script>
 <script src="./js/verticalmarquee.js"></script>
 <script src="./js/magicscroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
 
+	//methods
+	$.fn.fullpage.setAllowScrolling(true);
+});
+</script>
 <!-----Scripts----->
 
 </body>
