@@ -21,7 +21,7 @@ justify-content:center;
 }
 
 h1 {
-font-size:12vw;
+font-size:10vw;
 }
 
 </style>
@@ -30,7 +30,21 @@ font-size:12vw;
 $(function() { 
 $.scrollify({ 
 section : ".ex",
-sectionName : "section-name"
+sectionName : "section-name",
+interstitialSection : "",
+easing: "easeOutExpo",
+scrollSpeed: 1100,
+offset : 0,
+scrollbars: true,
+standardScrollElements: "",
+setHeights: true,
+overflowScroll: true,
+updateHash: true,
+touchScroll:true,
+before:function() {},
+after:function() {},
+afterResize:function() {},
+afterRender:function() {}
 }); }); 
 </script>
 
